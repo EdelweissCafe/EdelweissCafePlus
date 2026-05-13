@@ -22,7 +22,7 @@
     {
       "category": "kafe",
       "name": {"el": "Καπουτσινο", "en": "Cappuccino", "fr": "Cappuccino", "de": "Cappuccino", "it": "Cappuccino", "es": "Cappuccino", "ru": "Капучино", "sr": "Kapićino", "bg": "Капучино", "ro": "Cappuccino", "al": "Kapiçino", "tr": "Kahve"},
-      "price": 3.20,
+      "price": 4.00,
       "image": "https://via.placeholder.com/130x130?text=Cappuccino"
     },
     {
