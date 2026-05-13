@@ -12,5 +12,24 @@
     {"id": "salates", "name": {"el": "Σαλάτες", "en": "Salads", "fr": "Salades", "de": "Salate", "it": "Insalate", "es": "Ensaladas", "ru": "Салаты", "sr": "Salate", "bg": "Салати", "ro": "Salate", "al": "Sallata", "tr": "Salatalar"}},
     {"id": "fastfood", "name": {"el": "Φαστ Φουντ", "en": "Fast Food", "fr": "Fast Food", "de": "Fast Food", "it": "Fast Food", "es": "Comida Rápida", "ru": "Фастфуд", "sr": "Brza hrana", "bg": "Фаст фуд", "ro": "Fast Food", "al": "Fast Food", "tr": "Fast Food"}}
   ],
-  "products": []
+  "products": [
+    {
+      "category": "kafe",
+      "name": {"el": "Espresso", "en": "Espresso", "fr": "Espresso", "de": "Espresso", "it": "Espresso", "es": "Espresso", "ru": "Эспрессо", "sr": "Espreso", "bg": "Еспресо", "ro": "Espresso", "al": "Espresso", "tr": "Espresso"},
+      "price": 2.50,
+      "image": "https://via.placeholder.com/130x130?text=Espresso"
+    },
+    {
+      "category": "kafe",
+      "name": {"el": "Cappuccino", "en": "Cappuccino", "fr": "Cappuccino", "de": "Cappuccino", "it": "Cappuccino", "es": "Cappuccino", "ru": "Капучино", "sr": "Kapićino", "bg": "Капучино", "ro": "Cappuccino", "al": "Kapiçino", "tr": "Kahve"},
+      "price": 3.20,
+      "image": "https://via.placeholder.com/130x130?text=Cappuccino"
+    },
+    {
+      "category": "rofimata",
+      "name": {"el": "Τσάι Πράσινο", "en": "Green Tea", "fr": "Thé Vert", "de": "Grüner Tee", "it": "Tè Verde", "es": "Té Verde", "ru": "Зелёный чай", "sr": "Zeleni čaj", "bg": "Зелен чай", "ro": "Ceai Verde", "al": "Çaj i Gjelbër", "tr": "Yeşil Çay"},
+      "price": 2.80,
+      "image": "https://via.placeholder.com/130x130?text=Green+Tea"
+    }
+  ]
 }
