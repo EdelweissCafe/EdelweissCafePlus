@@ -4,7 +4,7 @@
   ],
   "products": [
     {"category": "kafe", "name": {"el": "Ελληνικός"}, "price": 2.50, "image": "foto/A1.jpg", "description": {"el": "Παραδοσιακός ελληνικός καφές"}},
-    {"category": "kafe", "name": {"el": "Ελληνικός Διπλός"}, "price": 3.50, "image": "foto/A2.jpg"},
+    {"category": "kafe", "name": {"el": "Ελληνικός Διπλός"}, "price": 3.50, "image": "foto/A2.jpg""description": {"el": "Διπλη απολαυση"}},
     {"category": "kafe", "name": {"el": "Νές Καφέ / Φραπέ"}, "price": 3.50, "image": "foto/A3.jpg"},
     {"category": "kafe", "name": {"el": "Μακιάτο"}, "price": 2.70, "image": "foto/A4.jpg"},
     {"category": "kafe", "name": {"el": "Εσπρέσσο"}, "price": 2.50, "image": "foto/A5.jpg"},
