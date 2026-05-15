@@ -14,6 +14,6 @@
     {"category": "kafe", "name": {"el": "Καπουτσίνο"}, "price": 3.50, "image": "foto/A9.jpg"},
     {"category": "kafe", "name": {"el": "Φρέντο Καπουτσίνο"}, "price": 4.00, "image": "foto/A10.jpg"},
     {"category": "kafe", "name": {"el": "Γαλλικός / Φίλτρου"}, "price": 3.50, "image": "foto/A11.jpg"},
-    {"category": "kafe", "name": {"el": "Λάτε  (Ζεστό/Κρύο)"}, "price": 3.50, "image": "foto/A12.jpg"}
+    {"category": "kafe", "name": {"el": "Λάτε    (Ζεστό/Κρύο)"}, "price": 3.50, "image": "foto/A12.jpg"}
   ]
 }
