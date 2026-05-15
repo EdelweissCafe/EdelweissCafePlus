@@ -1,1 +1,7 @@
-
+{
+  "category": "kafe",
+  "name": {"el": "Ελληνικός Καφές"},
+  "price": 2.80,
+  "image": "foto/A1.jpg",
+  "description": {"el": "Παραδοσιακός ελληνικός καφές σε μπρίκι", "en": "Traditional Greek coffee in briki"}
+}
