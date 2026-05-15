@@ -1,1 +1,19 @@
-
+{
+  "categories": [
+    {"id": "kafe", "name": {"el": "Καφέδες", "en": "Coffee", "fr": "Cafés", "de": "Kaffee", "it": "Caffè", "es": "Cafés", "ru": "Кофе", "sr": "Kafa", "bg": "Кафета", "ro": "Cafea", "al": "Kafe", "tr": "Kahve"}}
+  ],
+  "products": [
+    {"category": "kafe", "name": {"el": "Ελληνικός"}, "price": 2.50, "image": "foto/A1.jpg", "description": {"el": "Παραδοσιακός ελληνικός καφές"}},
+    {"category": "kafe", "name": {"el": "Ελληνικός Διπλός"}, "price": 3.50, "image": "foto/A2.jpg"},
+    {"category": "kafe", "name": {"el": "Νές Καφέ / Φραπέ"}, "price": 3.50, "image": "foto/A3.jpg"},
+    {"category": "kafe", "name": {"el": "Μακιάτο"}, "price": 2.70, "image": "foto/A4.jpg"},
+    {"category": "kafe", "name": {"el": "Εσπρέσσο"}, "price": 2.50, "image": "foto/A5.jpg"},
+    {"category": "kafe", "name": {"el": "Αμερικάνο"}, "price": 3.00, "image": "foto/A6.jpg"},
+    {"category": "kafe", "name": {"el": "Εσπρέσσο Διπλός"}, "price": 3.50, "image": "foto/A7.jpg"},
+    {"category": "kafe", "name": {"el": "Φρέντο Εσπρέσσο"}, "price": 3.50, "image": "foto/A8.jpg"},
+    {"category": "kafe", "name": {"el": "Καπουτσίνο"}, "price": 3.50, "image": "foto/A9.jpg"},
+    {"category": "kafe", "name": {"el": "Φρέντο Καπουτσίνο"}, "price": 4.00, "image": "foto/A10.jpg"},
+    {"category": "kafe", "name": {"el": "Γαλλικός / Φίλτρου"}, "price": 3.50, "image": "foto/A11.jpg"},
+    {"category": "kafe", "name": {"el": "Λάτε Ζεστό / Κρύο"}, "price": 3.50, "image": "foto/A12.jpg"}
+  ]
+}
