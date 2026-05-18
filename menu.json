@@ -87,7 +87,7 @@
     {"category": "salates", "name": {"el": "Σίζαρ"}, "price": 8.50, "image": "foto/I3.jpg", "description": {"el": "Αϊσμπεργκ, Κοτόπουλο, Κρουτόν, Παρμεζάνα, Σως Σίζαρ"}},
 
     {"category": "fastfood", "name": {"el": "Πατάτες Τηγανητές"}, "price": 4.00, "image": "foto/J1.jpg"},
-    {"category": "fastfood", "name": {"el": "Πατάτες Τηγανητές }, "price": 6.00, "image": "foto/J4.jpg", "description": {"el": "Τυρί Τσένταρ & Μπέικον"}},
+    {"category": "fastfood", "name": {"el": "Πατάτες Τηγανητές }, "price": 6.00, "image": "foto/J2.jpg", "description": {"el": "Τυρί Τσένταρ & Μπέικον"}},
     {"category": "fastfood", "name": {"el": "Μπέργκερ"}, "price": 9.00, "image": "foto/J3.jpg", "description": {"el": "Ψωμάκι Μπριός, Σως, Μπιφτέκι 150γρ, Μπέικον, Τσένταρ, Ντομάτα, Μαρούλι, Σως Μπάρμπεκιου"}},
     {"category": "fastfood", "name": {"el": "Κοτομπουκιές"}, "price": 9.00, "image": "foto/J4.jpg", "description": {"el": "Κοτομπουκιές, Πατάτες Τηγανητές, Σως"}},
     {"category": "fastfood", "name": {"el": "Κλαμπ Σάντουιτς"}, "price": 7.50, "image": "foto/J5.jpg", "description": {"el": "Ψωμί Κλαμπ, Ένταμ, Γαλοπούλα, Ζαμπόν, Ντομάτα, Μαρούλι, Σως, Πατάτες Τηγανητές"}},
