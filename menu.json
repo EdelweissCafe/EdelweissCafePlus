@@ -11,6 +11,8 @@
     {"id": "salates", "name": {"el": "Σαλάτες", "en": "Salads", "fr": "Salades", "de": "Salate", "it": "Insalate", "es": "Ensaladas", "ru": "Салаты", "sr": "Salate", "bg": "Салати", "ro": "Salate", "al": "Sallata", "tr": "Salatalar"}},
     {"id": "fastfood", "name": {"el": "Φαστ Φουντ", "en": "Fast Food", "fr": "Fast Food", "de": "Fast Food", "it": "Fast Food", "es": "Comida Rápida", "ru": "Фастфуд", "sr": "Brza hrana", "bg": "Фаст фуд", "ro": "Fast Food", "al": "Fast Food", "tr": "Fast Food"}},
     {"id": "pagota", "name": {"el": "Παγωτά", "en": "Ice Cream", "fr": "Glaces", "de": "Eis", "it": "Gelati", "es": "Helados", "ru": "Мороженое", "sr": "Sladoled", "bg": "Сладолед", "ro": "Înghețată", "al": "Akullore", "tr": "Dondurma"}}{"category": "kafe", "name": {"el": "Ελληνικός"}, "price": 2.50, "image": "foto/A1.jpg", "description": {"el": "Παραδοσιακός ελληνικός καφές"}},
+  ],
+    "products": [
     {"category": "kafe", "name": {"el": "Ελληνικός Διπλός"}, "price": 3.50, "image": "foto/A2.jpg", "description": {"el": "Διπλή δόση"}},
     {"category": "kafe", "name": {"el": "Νες Καφέ / Φραπέ"}, "price": 3.50, "image": "foto/A3.jpg", "description": {"el": "Ζεστός Νες Καφές / Κρύος Φραπές"}},
     {"category": "kafe", "name": {"el": "Μακιάτο"}, "price": 2.80, "image": "foto/A4.jpg", "description": {}},
