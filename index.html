@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edelweiss Café • Menu</title>
+  <style>
+    :root { --primary: #1e2a1e; --accent: #d4af37; --light: #f8f5f0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: var(--light); color: #333; }
 
+    header { 
+      background: var(--primary); 
+      color: white; 
+      text-align: center; 
+      padding: 20px 10px 15px; 
+    }
+    .logo { 
+      width: 170px; 
+      height: 170px; 
+      border-radius: 50%; 
+      border: 8px solid var(--accent); 
+      margin-bottom: 15px; 
+    }
+    h1 { margin-bottom: 15px; font-size: 2.1em; }
+
+    .lang-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px 10px 20px;
+      background: var(--primary);
+    }
+    .lang-btn {
+      font-size: 24px;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 50%;
+      cursor: pointer;
+      background: rgba(255,255,255,0.1);
+    }
+    .lang-btn.active {
+      border-color: var(--accent);
+      background: rgba(212,175,55,0.3);
+      transform: scale(1.1);
+    }
+
+    .categories { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 8px; 
+      justify-content: center; 
+      padding: 12px 10px; 
+      background: white; 
+      border-bottom: 1px solid #ddd;
+    }
+    .cat-btn { 
+      padding: 9px 16px; 
+      border: 1px solid #ccc; 
+      background: white; 
+      border-radius: 30px; 
+      cursor: pointer; 
+      font-size: 14.5px;
+      white-space: nowrap;
+    }
+    .cat-btn.active { 
+      background: var(--accent); 
+      color: black; 
+      font-weight: bold; 
+    }
+
+    .products { padding: 15px; max-width: 1200px; margin: 0 auto; }
+    .product {
+      display: flex; 
+      background: white; 
+      margin-bottom: 16px; 
+      border-radius: 16px; 
+      overflow: hidden; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .product img { width: 130px; height: 130px; object-fit: cover; }
+    .product-info { padding: 15px; flex: 1; }
+    
+    .product-name { 
+      font-size: 1.32em; 
+      font-weight: 700; 
+      margin-bottom: 6px; 
+      color: #1e2a1e;
+      line-height: 1.25;
+    }
+    .product-desc { 
+      color: #555; 
+      font-size: 0.85em; 
+      margin-bottom: 10px; 
+      line-height: 1.4; 
+    }
+    .price { 
+      font-size: 1.55em; 
+      font-weight: bold; 
+      color: var(--primary); 
+      text-align: right; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Edelweiss Café" class="logo">
+    <h1>Edelweiss Café</h1>
+    <div class="lang-buttons" id="langButtons"></div>
+  </header>
+
+  <div class="categories" id="categories"></div>
+  <div class="products" id="products"></div>
+
+  <script>
+    let currentLang = 'el';
+    let currentCategory = null;
+    let menuData = { categories: [], products: [] };
+
+    const flags = {
+      el: "🇬🇷", en: "🇬🇧", fr: "🇫🇷", de: "🇩🇪", it: "🇮🇹", es: "🇪🇸",
+      ru: "🇷🇺", sr: "🇷🇸", bg: "🇧🇬", ro: "🇷🇴", al: "🇦🇱", tr: "🇹🇷"
+    };
+
+    async function loadMenu() {
+      try {
+        const res = await fetch('menu.json?' + Date.now());
+        menuData = await res.json();
+        renderLanguages();
+        renderCategories();
+        if (menuData.categories.length > 0) showCategory(menuData.categories[0].id);
+      } catch(e) { console.error(e); }
+    }
+
+    function renderLanguages() {
+      const container = document.getElementById('langButtons');
+      container.innerHTML = '';
+      Object.keys(flags).forEach(lang => {
+        const btn = document.createElement('button');
+        btn.className = `lang-btn ${lang === currentLang ? 'active' : ''}`;
+        btn.innerHTML = flags[lang];
+        btn.onclick = () => { 
+          currentLang = lang; 
+          renderLanguages(); 
+          renderCategories(); 
+          if (currentCategory) showCategory(currentCategory); 
+        };
+        container.appendChild(btn);
+      });
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('categories');
+      container.innerHTML = '';
+      menuData.categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = `cat-btn ${cat.id === currentCategory ? 'active' : ''}`;
+        btn.textContent = cat.name[currentLang] || cat.name.el;
+        btn.onclick = () => showCategory(cat.id);
+        container.appendChild(btn);
+      });
+    }
+
+    function showCategory(catId) {
+      currentCategory = catId;
+      renderCategories();
+      const container = document.getElementById('products');
+      const cat = menuData.categories.find(c => c.id === catId);
+      container.innerHTML = `<h2 style="text-align:center; margin:25px 0 20px; color:#1e2a1e;">${cat.name[currentLang] || cat.name.el}</h2>`;
+
+      const filtered = menuData.products.filter(p => p.category === catId);
+
+      if (filtered.length === 0) {
+        container.innerHTML += `<p style="text-align:center; padding:60px; color:#666;">Δεν υπάρχουν προϊόντα ακόμα.</p>`;
+        return;
+      }
+
+      filtered.forEach(product => {
+        const div = document.createElement('div');
+        div.className = 'product';
+        div.innerHTML = `
+          <img src="${product.image}" alt="">
+          <div class="product-info">
+            <div class="product-name">${product.name[currentLang] || product.name.el}</div>
+            <div class="product-desc">${product.description ? (product.description[currentLang] || product.description.el || '') : ''}</div>
+            <div class="price">${product.price.toFixed(2)} €</div>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    loadMenu();
+  </script>
+</body>
+</html>
