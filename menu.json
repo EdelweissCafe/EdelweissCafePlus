@@ -92,8 +92,8 @@
     {"category": "fastfood", "name": {"el": "Κλαμπ Σάντουιτς"}, "price": 7.50, "image": "foto/J5.jpg", "description": {"el": "Ψωμί Κλαμπ, Ένταμ, Γαλοπούλα, Ζαμπόν, Ντομάτα, Μαρούλι, Σως, Πατάτες Τηγανητές"}},
     {"category": "fastfood", "name": {"el": "Γύρος Μερίδα"}, "price": 10.00, "image": "foto/J9.jpg", "description": {"el": "Γύρος 150γρ, Πατάτες Τηγανητές, Ντομάτα, Κρεμμύδι, Τζατζίκι, Πίτα"}},
     {"category": "fastfood", "name": {"el": "Χοτ Ντογκ Εντελβάις"}, "price": 7.00, "image": "foto/J6.jpg", "description": {"el": "Ψωμάκι, Λουκάνικο, Καραμελωμένα Κρεμμύδια, Πατάτες Τηγανητές, Μουστάρδα, Κέτσαπ"}},
-    {"category": "fastfood", "name": {"el": "Πίτσα Μαργαρίτα (Στρογγυλή 26εκ.)"}, "price": 8.50, "image": "foto/JJ7.jpg", "description": {"el": "+0,70€ κάθε έξτρα υλικό"}},
-    {"category": "fastfood", "name": {"el": "Πίτσα Μαργαρίτα (Τετράγωνη 30εκ.)"}, "price": 10.00, "image": "foto/JJ8.jpg", "description": {"el": "+0,70€ κάθε έξτρα υλικό"}},
+    {"category": "fastfood", "name": {"el": "Πίτσα Μαργαρίτα (Στρογγυλή 26εκ.)"}, "price": 8.50, "image": "foto/J7.jpg", "description": {"el": "+0,70€ κάθε έξτρα υλικό"}},
+    {"category": "fastfood", "name": {"el": "Πίτσα Μαργαρίτα (Τετράγωνη 30εκ.)"}, "price": 10.00, "image": "foto/J8.jpg", "description": {"el": "+0,70€ κάθε έξτρα υλικό"}},
     {"category": "fastfood", "name": {"el": "Τορτίγια Λαχανικών"}, "price": 6.00, "image": "foto/J10.jpg", "description": {"el": "Λευκό & κόκκινο λάχανο, Αγγούρι, Καρότο, Σως"}},
     {"category": "fastfood", "name": {"el": "Τορτίγια Κοτόπουλο"}, "price": 6.00, "image": "foto/JJ11.jpg", "description": {"el": "Μαρούλι, Κοτόπουλο"}}
   ]
