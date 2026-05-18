@@ -96,7 +96,7 @@
     {"category": "fastfood", "name": {"el": "Πίτσα Μαργαρίτα (Στρογγυλή 26εκ.)"}, "price": 8.50, "image": "foto/J7.jpg", "description": {"el": "+0,70€ κάθε έξτρα υλικό"}},
     {"category": "fastfood", "name": {"el": "Πίτσα Μαργαρίτα (Τετράγωνη 30εκ.)"}, "price": 10.00, "image": "foto/J8.jpg", "description": {"el": "+0,70€ κάθε έξτρα υλικό"}},
     {"category": "fastfood", "name": {"el": "Τορτίγια Λαχανικών"}, "price": 4.00, "image": "foto/J10.jpg", "description": {"el": "Λευκό & κόκκινο λάχανο, Αγγούρι, Καρότο, Σως"}},
-    {"category": "fastfood", "name": {"el": "Τορτίγια Κοτόπουλο"}, "price": 4.50, "image": "foto/J11.jpg", "description": {"el": "Μαρούλι, Κοτόπουλο"}},
+    {"category": "fastfood", "name": {"el": "Τορτίγια Κοτόπουλο"}, "price": 4.50, "image": "foto/J11.jpg", "description": {"el": "Μαρούλι, Κοτόπουλο, Σως"}},
 
     {"category": "pagota", "name": {"el": "Βανίλια (1 Μπάλα)"}, "price": 2.50, "image": "foto/K1.jpg"},
     {"category": "pagota", "name": {"el": "Σοκολάτα (1 Μπάλα)"}, "price": 2.50, "image": "foto/K2.jpg"},
