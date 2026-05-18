@@ -24,3 +24,5 @@
     {"category": "kafe", "name": {"el": "Freddo Cappuccino"}, "price": 4.00, "image": "foto/A10.jpg", "description": {}},
     {"category": "kafe", "name": {"el": "Γαλλικός / Φίλτρου"}, "price": 3.50, "image": "foto/A11.jpg", "description": {}},
     {"category": "kafe", "name": {"el": "Latte"}, "price": 3.50, "image": "foto/A12.jpg", "description": {}}
+    ]
+}
