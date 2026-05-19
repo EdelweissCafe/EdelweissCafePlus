@@ -43,9 +43,5 @@
     {"category": "chymoi", "name": {"el": "Χυμός Απλός (Ποτήρι)"}, "price": 3.50, "image": "foto/C5.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "chymoi", "name": {"el": "Χυμός Απλός (Κουτί)"}, "price": 2.50, "image": "foto/C6.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "chymoi", "name": {"el": "Χυμός Κουτί (Αμίτα, Φρι, κλπ)"}, "price": 3.00, "image": "foto/C7.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
- ]
-
-
-    
   ]
 }
