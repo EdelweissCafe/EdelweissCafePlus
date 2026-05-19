@@ -13,7 +13,7 @@
     {"id": "pagota", "name": {"el": "Παγωτά", "en": "Ice Cream", "fr": "Glaces", "de": "Eis", "it": "Gelati", "es": "Helados", "ru": "Мороженое", "sr": "Sladoled", "bg": "Сладолед", "ro": "Înghețată", "al": "Akullore", "tr": "Dondurma"}}
   ],
   "products": [
-    {"category": "kafe", "name": {"el": "Ελληνικός"}, "price": 2.80, "image": "foto/A1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Ελληνικός"}, "price": 2.50, "image": "foto/A1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Ελληνικός Διπλός"}, "price": 3.30, "image": "foto/A2.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Νες Καφέ / Φραπέ"}, "price": 3.30, "image": "foto/A3.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Μακιάτο"}, "price": 2.80, "image": "foto/A4.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
@@ -75,6 +75,12 @@
 
     {"category": "sandwich", "name": {"el": "Ψωμάκι/Μπαγκέτα"}, "price": 3.50, "image": "foto/G1.jpg", "description": {"el": "Γαλοπούλα/Ζαμπόν, Ένταμ/Γκούντα, Ντομάτα, Μαγιονέζα", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "sandwich", "name": {"el": "Ψωμάκι/Μπαγκέτα"}, "price": 4.50, "image": "foto/G2.jpg", "description": {"el": "Κοτόπουλο, Μαρούλι, Ένταμ/Γκούντα, Ντομάτα, Σως", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "sandwich", "name": {"el": "Τόστ"}, "price": 2.50, "image": "foto/G3.jpg", "description": {"el": "Γαλοπούλα/Ζαμπόν, Ένταμ/Γκούντα", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
+    {"category": "sandwich", "name": {"el": "Τόστ"}, "price": 2.50, "image": "foto/G3.jpg", "description": {"el": "Γαλοπούλα/Ζαμπόν, Ένταμ/Γκούντα", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+
+    {"category": "proina", "name": {"el": "Κροκ Μαντάμ"}, "price": 7.50, "image": "foto/H1.jpg", "description": {"el": "Ψωμί Κλάμπ, Ένταμ/Γκούντα, Ζαμπόν/Γαλοπούλα, Μπεσαμέλ, Αυγό, Σως", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "proina", "name": {"el": "Αγγλικό Πρωινό"}, "price": 14.00, "image": "foto/H2.jpg", "description": {"el": "2 Αυγά, Λουκάνικα, Μπέικον, Ντομάτα, Φασόλια, Τσάι/Καφές, Χυμός Ποτήρι", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "proina", "name": {"el": "Ελληνικό Πρωινό"}, "price": 10.00, "image": "foto/H3.jpg", "description": {"el": "Ψωμί Ολικής, Ντομάτα, Αγγούρι, Αυγό, Φέτα, Ελιές, Λάδι, Ξύδι, Ρίγανη", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "proina", "name": {"el": "Ομελέτα"}, "price": 6.00, "image": "foto/H4.jpg", "description": {"el": "2 Αυγά + 0,70€ κάθε έξτρα υλικό", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
   ]
     }
+    
