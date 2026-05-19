@@ -24,6 +24,16 @@
     {"category": "kafe", "name": {"el": "Cappuccino"}, "price": 3.30, "image": "foto/A9.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Freddo Cappuccino"}, "price": 3.30, "image": "foto/A10.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Γαλλικός / Φίλτρου"}, "price": 3.50, "image": "foto/A11.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "kafe", "name": {"el": "Latte"}, "price": 3.50, "image": "foto/A12.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
+    {"category": "kafe", "name": {"el": "Latte"}, "price": 3.50, "image": "foto/A12.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+
+    {"category": "rofimata", "name": {"el": "Σοκολάτα (Ζεστή/Κρύα)"}, "price": 4.50, "image": "foto/B1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "rofimata", "name": {"el": "Σοκολάτα Βιενουά (Σαντιγί)"}, "price": 5.00, "image": "foto/B2.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "rofimata", "name": {"el": "Σοκολάτα Λευκή"}, "price": 4.50, "image": "foto/B3.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "rofimata", "name": {"el": "Κακάο"}, "price": 4.00, "image": "foto/B4.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "rofimata", "name": {"el": "Τσάι (Πράσινο - Μαύρο)"}, "price": 3.50, "image": "foto/B5.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "rofimata", "name": {"el": "Τσάι Βουνού"}, "price": 3.50, "image": "foto/B6.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "rofimata", "name": {"el": "Τσάι Μάτσα"}, "price": 3.50, "image": "foto/B7.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "rofimata", "name": {"el": "Τσάι Κρύο (Ροδάκινο - Λεμόνι)"}, "price": 3.50, "image": "foto/B10.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "rofimata", "name": {"el": "Χαμομήλι"}, "price": 3.50, "image": "foto/B11.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
   ]
 }
