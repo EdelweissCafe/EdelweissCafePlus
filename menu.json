@@ -13,16 +13,16 @@
     {"id": "pagota", "name": {"el": "Παγωτά", "en": "Ice Cream", "fr": "Glaces", "de": "Eis", "it": "Gelati", "es": "Helados", "ru": "Мороженое", "sr": "Sladoled", "bg": "Сладолед", "ro": "Înghețată", "al": "Akullore", "tr": "Dondurma"}}
   ],
  "products": [
-    {"category": "kafe", "name": {"el": "Ελληνικός"}, "price": 2.50, "image": "foto/A1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "kafe", "name": {"el": "Ελληνικός Διπλός"}, "price": 3.50, "image": "foto/A2.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "kafe", "name": {"el": "Νες Καφέ / Φραπέ"}, "price": 3.50, "image": "foto/A3.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "kafe", "name": {"el": "Μακιάτο"}, "price": 2.70, "image": "foto/A4.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "kafe", "name": {"el": "Espresso"}, "price": 2.20, "image": "foto/A5.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Ελληνικός"}, "price": 2.80, "image": "foto/A1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Ελληνικός Διπλός"}, "price": 3.30, "image": "foto/A2.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Νες Καφέ / Φραπέ"}, "price": 3.30, "image": "foto/A3.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Μακιάτο"}, "price": 2.80, "image": "foto/A4.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Espresso"}, "price": 2.50, "image": "foto/A5.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Αμερικάνο"}, "price": 3.00, "image": "foto/A6.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "kafe", "name": {"el": "Espresso Διπλός"}, "price": 3.50, "image": "foto/A7.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "kafe", "name": {"el": "Freddo Espresso"}, "price": 3.50, "image": "foto/A8.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "kafe", "name": {"el": "Cappuccino"}, "price": 3.50, "image": "foto/A9.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "kafe", "name": {"el": "Freddo Cappuccino"}, "price": 4.00, "image": "foto/A10.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Espresso Διπλός"}, "price": 3.00, "image": "foto/A7.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Freddo Espresso"}, "price": 3.30, "image": "foto/A8.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Cappuccino"}, "price": 3.30, "image": "foto/A9.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Freddo Cappuccino"}, "price": 3.30, "image": "foto/A10.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Γαλλικός / Φίλτρου"}, "price": 3.50, "image": "foto/A11.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Latte"}, "price": 3.50, "image": "foto/A12.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
 
@@ -42,13 +42,13 @@
     {"category": "chymoi", "name": {"el": "Σπιτική Λεμονάδα"}, "price": 4.00, "image": "foto/C4.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "chymoi", "name": {"el": "Χυμός Απλός (Ποτήρι)"}, "price": 3.50, "image": "foto/C5.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "chymoi", "name": {"el": "Χυμός Απλός (Κουτί)"}, "price": 2.50, "image": "foto/C6.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "chymoi", "name": {"el": "Χυμός Κουτί (Αμίτα, Φρι, κλπ)"}, "price": 3.00, "image": "foto/C7.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
-   
+    {"category": "chymoi", "name": {"el": "Χυμός Κουτί (Αμίτα, Φρι, κλπ)"}, "price": 3.00, "image": "foto/C7.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+
     {"category": "smoothies", "name": {"el": "Φράουλα, Μπανάνα, Κεράσι"}, "price": 5.00, "image": "foto/D1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "smoothies", "name": {"el": "Παπάγια, Μάνγκο, Ανανάς"}, "price": 5.00, "image": "foto/D2.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "smoothies", "name": {"el": "Σμέουρο, Μύρτιλο, Μπανάνα"}, "price": 5.00, "image": "foto/D3.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "smoothies", "name": {"el": "Πεπόνι, Μάνγκο, Ανανάς, Ακτινίδιο"}, "price": 5.00, "image": "foto/D4.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "smoothies", "name": {"el": "Μπανάνα, Καρύδα, Ανανάς"}, "price": 5.00, "image": "foto/D5.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "smoothies", "name": {"el": "Καρότο, Πράσινο Μήλο, Μάνγκο, Παπάγια"}, "price": 5.00, "image": "foto/D6.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
- ]
+      ]
 }
