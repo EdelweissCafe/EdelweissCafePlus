@@ -62,5 +62,19 @@
     {"category": "anapsyktika", "name": {"el": "Νερό Μικρό (500ml)"}, "price": 3.00, "image": "foto/E9.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "anapsyktika", "name": {"el": "Νερό Ανθρακούχο (500ml)"}, "price": 3.00, "image": "foto/E10.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "anapsyktika", "name": {"el": "Ενεργειακά Ποτά (Κουτί)"}, "price": 3.00, "image": "foto/E11.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
+
+    {"category": "mpyres", "name": {"el": "Άλφα Κουτί (330ml)"}, "price": 3.00, "image": "foto/F1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "mpyres", "name": {"el": "Άμστελ Κουτί (330ml)"}, "price": 3.00, "image": "foto/F2.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "mpyres", "name": {"el": "Μύθος Κουτί (330ml)"}, "price": 3.00, "image": "foto/F3.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "mpyres", "name": {"el": "Φίξ Κουτί (330ml)"}, "price": 3.00, "image": "foto/F4.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "mpyres", "name": {"el": "Χωρίς Αλκοόλ (330ml)"}, "price": 3.00, "image": "foto/F5.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "mpyres", "name": {"el": "Κρασί Λευκό (Ποτήρι)"}, "price": 3.00, "image": "foto/F6.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "mpyres", "name": {"el": "Κρασί Κόκκινο (Ποτήρι)"}, "price": 3.00, "image": "foto/F7.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "mpyres", "name": {"el": "Ούζο / Τσίπουρο (Ποτήρι)"}, "price": 3.00, "image": "foto/F8.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "mpyres", "name": {"el": "Οινοπνευματώδη (Ποτήρι)"}, "price": 3.00, "image": "foto/F9.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+
+    {"category": "sandwich", "name": {"el": "Ψωμάκι/Μπαγκέτα"}, "price": 3.50, "image": "foto/G1.jpg", "description": {"el": "Γαλοπούλα/Ζαμπόν, Ένταμ/Γκούντα, Ντομάτα, Μαγιονέζα", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "sandwich", "name": {"el": "Ψωμάκι/Μπαγκέτα"}, "price": 4.50, "image": "foto/G2.jpg", "description": {"el": "Κοτόπουλο, Μαρούλι, Ένταμ/Γκούντα, Ντομάτα, Σως", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "sandwich", "name": {"el": "Τόστ"}, "price": 2.50, "image": "foto/G3.jpg", "description": {"el": "Γαλοπούλα/Ζαμπόν, Ένταμ/Γκούντα", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
  ]
 }
