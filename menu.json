@@ -15,7 +15,7 @@
  "products": [
     {"category": "kafe", "name": {"el": "Ελληνικός"}, "price": 2.50, "image": "foto/A1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Ελληνικός Διπλός"}, "price": 3.50, "image": "foto/A2.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "kafe", "name": {"el": "Νες Καφέ / Φραπέ"}, "price": 3.30, "image": "foto/A3.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "kafe", "name": {"el": "Νες Καφέ / Φραπέ"}, "price": 3.50, "image": "foto/A3.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Μακιάτο"}, "price": 2.80, "image": "foto/A4.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Espresso"}, "price": 2.50, "image": "foto/A5.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Αμερικάνο"}, "price": 3.00, "image": "foto/A6.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
@@ -76,5 +76,5 @@
     {"category": "sandwich", "name": {"el": "Ψωμάκι/Μπαγκέτα"}, "price": 3.50, "image": "foto/G1.jpg", "description": {"el": "Γαλοπούλα/Ζαμπόν, Ένταμ/Γκούντα, Ντομάτα, Μαγιονέζα", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "sandwich", "name": {"el": "Ψωμάκι/Μπαγκέτα"}, "price": 4.50, "image": "foto/G2.jpg", "description": {"el": "Κοτόπουλο, Μαρούλι, Ένταμ/Γκούντα, Ντομάτα, Σως", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "sandwich", "name": {"el": "Τόστ"}, "price": 2.50, "image": "foto/G3.jpg", "description": {"el": "Γαλοπούλα/Ζαμπόν, Ένταμ/Γκούντα", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
- ]
+      ]
 }
