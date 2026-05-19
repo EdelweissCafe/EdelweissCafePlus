@@ -12,7 +12,7 @@
     {"id": "fastfood", "name": {"el": "Φαστ Φουντ", "en": "Fast Food", "fr": "Fast Food", "de": "Fast Food", "it": "Fast Food", "es": "Comida Rápida", "ru": "Фастфуд", "sr": "Brza hrana", "bg": "Фаст фуд", "ro": "Fast Food", "al": "Fast Food", "tr": "Fast Food"}},
     {"id": "pagota", "name": {"el": "Παγωτά", "en": "Ice Cream", "fr": "Glaces", "de": "Eis", "it": "Gelati", "es": "Helados", "ru": "Мороженое", "sr": "Sladoled", "bg": "Сладолед", "ro": "Înghețată", "al": "Akullore", "tr": "Dondurma"}}
   ],
-  "products": [
+ "products": [
     {"category": "kafe", "name": {"el": "Ελληνικός"}, "price": 2.80, "image": "foto/A1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Ελληνικός Διπλός"}, "price": 3.30, "image": "foto/A2.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "kafe", "name": {"el": "Νες Καφέ / Φραπέ"}, "price": 3.30, "image": "foto/A3.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
@@ -34,6 +34,18 @@
     {"category": "rofimata", "name": {"el": "Τσάι Βουνού"}, "price": 3.50, "image": "foto/B6.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "rofimata", "name": {"el": "Τσάι Μάτσα"}, "price": 3.50, "image": "foto/B7.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "rofimata", "name": {"el": "Τσάι Κρύο (Ροδάκινο - Λεμόνι)"}, "price": 3.50, "image": "foto/B10.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "rofimata", "name": {"el": "Χαμομήλι"}, "price": 3.50, "image": "foto/B11.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
+    {"category": "rofimata", "name": {"el": "Χαμομήλι"}, "price": 3.50, "image": "foto/B11.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+
+    {"category": "chymoi", "name": {"el": "Φυσικός Χυμός Πορτοκάλι"}, "price": 4.50, "image": "foto/C1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "chymoi", "name": {"el": "Φυσικός Χυμός Ανάμικτος"}, "price": 5.00, "image": "foto/C2.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "chymoi", "name": {"el": "Φυσικός Χυμός Συσκευασίας"}, "price": 4.00, "image": "foto/C3.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "chymoi", "name": {"el": "Σπιτική Λεμονάδα"}, "price": 4.00, "image": "foto/C4.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "chymoi", "name": {"el": "Χυμός Απλός (Ποτήρι)"}, "price": 3.50, "image": "foto/C5.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "chymoi", "name": {"el": "Χυμός Απλός (Κουτί)"}, "price": 2.50, "image": "foto/C6.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "chymoi", "name": {"el": "Χυμός Κουτί (Αμίτα, Φρι, κλπ)"}, "price": 3.00, "image": "foto/C7.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
+ ]
+
+
+    
   ]
 }
