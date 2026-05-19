@@ -84,7 +84,20 @@
 
     {"category": "salates", "name": {"el": "Χωριάτικη"}, "price": 8.50, "image": "foto/I1.jpg", "description": {"el": "Ντομάτα, Αγγούρι, Κρεμμύδι, Πιπεριά, Ελιές, Φέτα, Ελαιόλαδο, Μπαλσάμικο, Ρίγανη", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
     {"category": "salates", "name": {"el": "Ντάκος"}, "price": 8.50, "image": "foto/I2.jpg", "description": {"el": "Ντάκος, Ντομάτα, Φέτα, Ελιές, Ελαιόλαδο, Μπαλσάμικο, Ρίγανη", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
-    {"category": "salates", "name": {"el": "Σίζαρ"}, "price": 8.50, "image": "foto/I3.jpg", "description": {"el": "Αϊσμπεργκ, Κοτόπουλο, Κρουτόν, Παρμεζάνα, Σως Σίζαρ", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
+    {"category": "salates", "name": {"el": "Σίζαρ"}, "price": 8.50, "image": "foto/I3.jpg", "description": {"el": "Αϊσμπεργκ, Κοτόπουλο, Κρουτόν, Παρμεζάνα, Σως Σίζαρ", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+
+    {"category": "fastfood", "name": {"el": "Πατάτες Τηγανητές"}, "price": 4.00, "image": "foto/J1.jpg", "description": {"el": "", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "fastfood", "name": {"el": "Πατάτες Τηγανητές"}, "price": 6.00, "image": "foto/J2.jpg", "description": {"el": "Τυρί Τσένταρ & Μπέικον", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "fastfood", "name": {"el": "Μπέργκερ"}, "price": 9.00, "image": "foto/J3.jpg", "description": {"el": "Ψωμάκι Μπριός, Σως, Μπιφτέκι 150γρ, Μπέικον, Τσένταρ, Ντομάτα, Μαρούλι, Σως Μπάρμπεκιου", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "fastfood", "name": {"el": "Κοτομπουκιές"}, "price": 9.00, "image": "foto/J4.jpg", "description": {"el": "Κοτομπουκιές, Πατάτες Τηγανητές, Σως", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "fastfood", "name": {"el": "Κλαμπ Σάντουιτς"}, "price": 7.50, "image": "foto/J5.jpg", "description": {"el": "Ψωμί Κλαμπ, Ένταμ, Γαλοπούλα, Ζαμπόν, Ντομάτα, Μαρούλι, Σως, Πατάτες Τηγανητές", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "fastfood", "name": {"el": "Γύρος Μερίδα"}, "price": 10.00, "image": "foto/J9.jpg", "description": {"el": "Γύρος 150γρ, Πατάτες Τηγανητές, Ντομάτα, Κρεμμύδι, Τζατζίκι, Πίτα", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "fastfood", "name": {"el": "Χοτ Ντογκ Εντελβάις"}, "price": 6.00, "image": "foto/J6.jpg", "description": {"el": "Ψωμάκι, Λουκάνικο, Καραμελωμένα Κρεμμύδια, Πατάτες Τηγανητές, Μουστάρδα, Κέτσαπ", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "fastfood", "name": {"el": "Πίτσα Μαργαρίτα (Στρογγυλή 26εκ.)"}, "price": 6.00, "image": "foto/J7.jpg", "description": {"el": "+0,70€ κάθε έξτρα υλικό", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "fastfood", "name": {"el": "Πίτσα Μαργαρίτα (Τετράγωνη 30εκ.)"}, "price": 6.00, "image": "foto/J8.jpg", "description": {"el": "+0,70€ κάθε έξτρα υλικό", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "fastfood", "name": {"el": "Τορτίγια Λαχανικών"}, "price": 4.00, "image": "foto/J10.jpg", "description": {"el": "Λευκό & κόκκινο λάχανο, Αγγούρι, Καρότο, Σως", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}},
+    {"category": "fastfood", "name": {"el": "Τορτίγια Κοτόπουλο"}, "price": 4.50, "image": "foto/J11.jpg", "description": {"el": "Μαρούλι, Κοτόπουλο", "en": "", "fr": "", "de": "", "it": "", "es": "", "ru": "", "sr": "", "bg": "", "ro": "", "al": "", "tr": ""}}
   ]
-    }
+}
+  
     
