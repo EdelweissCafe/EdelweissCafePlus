@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edelweiss Café - Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
 
+  <!-- Login -->
+  <div id="loginScreen" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-800 to-teal-900">
+    <div class="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-md">
+      <h1 class="text-3xl font-bold text-center">Edelweiss Café</h1>
+      <p class="text-center text-gray-500 mt-2 mb-8">Admin Panel</p>
+      <input type="password" id="password" placeholder="••••" 
+             class="w-full px-5 py-4 border rounded-2xl text-center text-xl focus:outline-none focus:border-green-600">
+      <button onclick="login()" class="mt-6 w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-2xl text-lg font-semibold">Είσοδος</button>
+    </div>
+  </div>
+
+  <!-- Admin -->
+  <div id="adminPanel" class="hidden">
+    <header class="bg-white shadow sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Edelweiss Admin</h1>
+        <div class="flex gap-3">
+          <button onclick="downloadJSON()" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-2xl flex items-center gap-2">
+            <i class="fas fa-download"></i> Κατέβασε menu.json
+          </button>
+          <button onclick="logout()" class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-2xl">Έξοδος</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-8">
+      <div id="categoriesList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="editModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-3xl w-full max-w-3xl max-h-[92vh] flex flex-col">
+      <div class="p-6 border-b flex justify-between items-center">
+        <h2 class="text-xl font-semibold" id="modalTitle">Επεξεργασία Προϊόντος</h2>
+        <button onclick="closeModal()" class="text-3xl text-gray-400 hover:text-red-500">×</button>
+      </div>
+      <div class="p-6 overflow-auto flex-1" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+    let menuData = { categories: [], products: [] };
+    const PASSWORD = "1234";
+
+    const languages = [
+      {code:"el", name:"🇬🇷 Ελληνικά"}, {code:"en", name:"🇬🇧 English"}, {code:"fr", name:"🇫🇷 Français"},
+      {code:"de", name:"🇩🇪 Deutsch"}, {code:"it", name:"🇮🇹 Italiano"}, {code:"es", name:"🇪🇸 Español"},
+      {code:"ru", name:"🇷🇺 Русский"}, {code:"sr", name:"🇷🇸 Srpski"}, {code:"bg", name:"🇧🇬 Български"},
+      {code:"ro", name:"🇷🇴 Română"}, {code:"al", name:"🇦🇱 Shqip"}, {code:"tr", name:"🇹🇷 Türkçe"}
+    ];
+
+    async function loadMenu() {
+      try {
+        const res = await fetch('menu.json?' + Date.now());
+        menuData = await res.json();
+        renderCategories();
+      } catch(e) {
+        alert("Δεν βρέθηκε το menu.json");
+      }
+    }
+
+    function login() {
+      if (document.getElementById('password').value === PASSWORD) {
+        document.getElementById('loginScreen').classList.add('hidden');
+        document.getElementById('adminPanel').classList.remove('hidden');
+        loadMenu();
+      } else {
+        alert("Λάθος κωδικός!");
+      }
+    }
+
+    function logout() {
+      document.getElementById('adminPanel').classList.add('hidden');
+      document.getElementById('loginScreen').classList.remove('hidden');
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('categoriesList');
+      container.innerHTML = "";
+
+      menuData.categories.forEach(cat => {
+        const count = menuData.products.filter(p => p.category === cat.id).length;
+        const div = document.createElement('div');
+        div.className = "bg-white rounded-3xl p-6 shadow hover:shadow-xl cursor-pointer transition";
+        div.innerHTML = `
+          <h3 class="font-semibold text-xl">${cat.name.el}</h3>
+          <p class="text-gray-500 mt-1">${count} προϊόντα</p>
+        `;
+        div.onclick = () => showProducts(cat.id);
+        container.appendChild(div);
+      });
+    }
+
+    function showProducts(catId) {
+      alert("✅ Η λειτουργία επεξεργασίας προϊόντων θα προστεθεί στην επόμενη αναβάθμιση.\n\nΠρος το παρόν μπορείς να κατεβάσεις το menu.json.");
+      downloadJSON();
+    }
+
+    function downloadJSON() {
+      const dataStr = JSON.stringify(menuData, null, 2);
+      const uri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+      const link = document.createElement('a');
+      link.href = uri;
+      link.download = 'menu.json';
+      link.click();
+    }
+  </script>
+</body>
+</html>
