@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edelweiss Café - Admin Panel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; }
+    .product-card { transition: all 0.2s; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+  </style>
+</head>
+<body class="bg-gray-50">
 
+  <!-- Login Screen -->
+  <div id="loginScreen" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-800 to-emerald-900">
+    <div class="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-md">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800">Edelweiss Café</h1>
+        <p class="text-gray-500 mt-2">Admin Panel</p>
+      </div>
+      <input type="password" id="password" placeholder="Κωδικός πρόσβασης" 
+             class="w-full px-4 py-3 border rounded-xl focus:outline-none focus:border-green-500 text-center text-lg">
+      <button onclick="login()" 
+              class="mt-6 w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition">
+        Είσοδος
+      </button>
+    </div>
+  </div>
+
+  <!-- Admin Panel -->
+  <div id="adminPanel" class="hidden min-h-screen">
+    <header class="bg-white shadow-sm border-b sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-800 flex items-center gap-3">
+          <i class="fas fa-coffee text-green-600"></i> Edelweiss Café Admin
+        </h1>
+        <div class="flex gap-3">
+          <button onclick="downloadJSON()" 
+                  class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-xl flex items-center gap-2">
+            <i class="fas fa-download"></i> Κατέβασε menu.json
+          </button>
+          <button onclick="logout()" 
+                  class="bg-gray-500 hover:bg-gray-600 text-white px-5 py-2 rounded-xl">
+            Έξοδος
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 py-8">
+      <div id="categoriesList" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Categories loaded by JS -->
+      </div>
+
+      <!-- Edit Modal -->
+      <div id="editModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+        <div class="bg-white rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-hidden">
+          <div class="p-6 border-b flex justify-between items-center">
+            <h2 class="text-xl font-semibold" id="modalTitle">Επεξεργασία Προϊόντος</h2>
+            <button onclick="closeModal()" class="text-2xl text-gray-400 hover:text-gray-600">×</button>
+          </div>
+          <div class="p-6 overflow-auto max-h-[70vh]" id="modalContent">
+            <!-- Form loaded by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let menuData = { categories: [], products: [] };
+    const PASSWORD = "1234"; // ← Αλλάξτε το εδώ όταν θέλετε
+
+    async function loadMenu() {
+      try {
+        const res = await fetch('menu.json?' + Date.now());
+        menuData = await res.json();
+        renderCategories();
+      } catch (e) {
+        alert("Δεν βρέθηκε το menu.json!");
+      }
+    }
+
+    function login() {
+      const pass = document.getElementById('password').value;
+      if (pass === PASSWORD) {
+        document.getElementById('loginScreen').classList.add('hidden');
+        document.getElementById('adminPanel').classList.remove('hidden');
+        loadMenu();
+      } else {
+        alert("Λάθος κωδικός!");
+      }
+    }
+
+    function logout() {
+      document.getElementById('adminPanel').classList.add('hidden');
+      document.getElementById('loginScreen').classList.remove('hidden');
+      document.getElementById('password').value = '';
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('categoriesList');
+      container.innerHTML = '';
+
+      menuData.categories.forEach(cat => {
+        const productsInCat = menuData.products.filter(p => p.category === cat.id);
+        
+        const div = document.createElement('div');
+        div.className = "bg-white rounded-2xl shadow p-5 cursor-pointer hover:shadow-lg transition product-card";
+        div.innerHTML = `
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-semibold text-lg">${cat.name.el}</h3>
+              <p class="text-sm text-gray-500">${productsInCat.length} προϊόντα</p>
+            </div>
+            <i class="fas fa-chevron-right text-gray-400"></i>
+          </div>
+        `;
+        div.onclick = () => showCategoryProducts(cat.id);
+        container.appendChild(div);
+      });
+    }
+
+    function showCategoryProducts(categoryId) {
+      const products = menuData.products.filter(p => p.category === categoryId);
+      const cat = menuData.categories.find(c => c.id === categoryId);
+
+      let html = `<h2 class="text-2xl font-bold mb-6">${cat.name.el}</h2>`;
+      html += `<button onclick="addNewProduct('${categoryId}')" class="mb-6 bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700">+ Προσθήκη νέου προϊόντος</button>`;
+
+      products.forEach((product, index) => {
+        html += `
+          <div class="bg-gray-50 p-5 rounded-2xl mb-4 flex justify-between items-center product-card">
+            <div class="flex items-center gap-4">
+              <img src="${product.image}" class="w-16 h-16 object-cover rounded-xl">
+              <div>
+                <h4 class="font-semibold">${product.name.el}</h4>
+                <p class="text-green-600 font-medium">${product.price}€</p>
+              </div>
+            </div>
+            <button onclick="editProduct('${categoryId}', ${menuData.products.indexOf(product)})" 
+                    class="bg-white border border-gray-300 px-5 py-2 rounded-xl hover:bg-gray-100">
+              Επεξεργασία
+            </button>
+          </div>`;
+      });
+
+      document.getElementById('modalContent').innerHTML = html;
+      document.getElementById('modalTitle').textContent = cat.name.el;
+      document.getElementById('editModal').classList.remove('hidden');
+    }
+
+    function editProduct(categoryId, globalIndex) {
+      const product = menuData.products[globalIndex];
+      let formHTML = `
+        <input type="text" id="prodName" value="${product.name.el}" class="w-full p-3 border rounded-xl mb-4" placeholder="Όνομα (Ελληνικά)">
+        <input type="number" step="0.01" id="prodPrice" value="${product.price}" class="w-full p-3 border rounded-xl mb-6" placeholder="Τιμή €">
+        <textarea id="prodDesc" class="w-full p-3 border rounded-xl h-24" placeholder="Περιγραφή (Ελληνικά)">${product.description?.el || ''}</textarea>
+        <input type="text" id="prodImage" value="${product.image}" class="w-full p-3 border rounded-xl mt-4" placeholder="Διαδρομή φωτογραφίας (foto/A13.jpg)">
+        
+        <div class="mt-8 flex gap-4">
+          <button onclick="saveProduct(${globalIndex})" class="flex-1 bg-green-600 text-white py-4 rounded-2xl font-semibold">Αποθήκευση</button>
+          <button onclick="deleteProduct(${globalIndex})" class="flex-1 bg-red-600 text-white py-4 rounded-2xl font-semibold">Διαγραφή</button>
+        </div>
+      `;
+
+      document.getElementById('modalContent').innerHTML = formHTML;
+      document.getElementById('modalTitle').textContent = "Επεξεργασία: " + product.name.el;
+    }
+
+    function addNewProduct(categoryId) {
+      const newProduct = {
+        category: categoryId,
+        name: {el: "", en: "", fr: "", de: "", it: "", es: "", ru: "", sr: "", bg: "", ro: "", al: "", tr: ""},
+        price: 0,
+        image: "foto/new.jpg",
+        description: {el: "", en: "", fr: "", de: "", it: "", es: "", ru: "", sr: "", bg: "", ro: "", al: "", tr: ""}
+      };
+      menuData.products.push(newProduct);
+      editProduct(categoryId, menuData.products.length - 1);
+    }
+
+    function saveProduct(index) {
+      const product = menuData.products[index];
+      product.name.el = document.getElementById('prodName').value;
+      product.price = parseFloat(document.getElementById('prodPrice').value) || 0;
+      product.description.el = document.getElementById('prodDesc').value;
+      product.image = document.getElementById('prodImage').value;
+
+      alert("✅ Οι αλλαγές αποθηκεύτηκαν προσωρινά!");
+      closeModal();
+      renderCategories();
+    }
+
+    function deleteProduct(index) {
+      if (confirm("Θέλετε σίγουρα να διαγράψετε αυτό το προϊόν;")) {
+        menuData.products.splice(index, 1);
+        closeModal();
+        renderCategories();
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('editModal').classList.add('hidden');
+    }
+
+    function downloadJSON() {
+      const dataStr = JSON.stringify(menuData, null, 2);
+      const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+      const exportFileDefaultName = 'menu.json';
+      const linkElement = document.createElement('a');
+      linkElement.setAttribute('href', dataUri);
+      linkElement.setAttribute('download', exportFileDefaultName);
+      linkElement.click();
+    }
+
+    // Allow Enter key on login
+    document.getElementById('password').addEventListener("keypress", function(e) {
+      if (e.key === "Enter") login();
+    });
+  </script>
+</body>
+</html>
