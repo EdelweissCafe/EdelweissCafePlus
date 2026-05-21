@@ -127,7 +127,7 @@ function showProducts(catId) {
     const globalIndex = menuData.products.findIndex(p => p === product);
 
     const div = document.createElement("div");
-    div.className = "bg-gray-50 p-5 rounded-2xl flex items-center gap-4 group";
+    div.className = "bg-gray-50 p-4 rounded-2xl flex items-center gap-4 group";
     div.innerHTML = `
       <div class="flex flex-col gap-1">
         <button onclick="moveProduct(${globalIndex}, -1)" class="w-9 h-9 bg-white hover:bg-green-100 rounded-xl text-lg">↑</button>
