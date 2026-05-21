@@ -24,17 +24,19 @@
 
   <!-- Main Panel -->
   <div id="adminPanel" class="hidden">
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-2xl font-semibold">Κατηγορίες</h2>
-      <button onclick="addNewCategory()" 
-              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl flex items-center gap-2">
-        <i class="fas fa-plus"></i> Νέα Κατηγορία
-      </button>
-    </div>
-
-    <div id="categoriesList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+  <div class="flex justify-between items-center mb-6">
+  <h2 class="text-2xl font-semibold">Κατηγορίες</h2>
+  <div class="flex gap-3">
+    <button onclick="addNewCategory()" 
+            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl flex items-center gap-2">
+      <i class="fas fa-plus"></i> Νέα Κατηγορία
+    </button>
+    <button onclick="showDeleteCategoryModal()" 
+            class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-2xl flex items-center gap-2">
+      <i class="fas fa-trash"></i> Διαγραφή Κατηγορίας
+    </button>
   </div>
-</div>
+  </div>  
 
 <!-- Product Modal -->
 <div id="productModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
@@ -48,6 +50,15 @@
     </button>
     <button onclick="closeModal()" 
             class="mt-3 w-full bg-gray-200 py-4 rounded-2xl font-semibold">Κλείσιμο</button>
+
+    <!-- Delete Category Modal -->
+<div id="deleteCategoryModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+  <div class="bg-white w-full max-w-md mx-4 rounded-3xl p-6">
+    <h3 class="text-xl font-bold mb-6 text-red-600">Διαγραφή Κατηγορίας</h3>
+    <div id="categoryDeleteList" class="space-y-3"></div>
+    <button onclick="closeDeleteModal()" 
+            class="mt-6 w-full bg-gray-300 py-4 rounded-2xl">Κλείσιμο</button>
+  
   </div>
 </div>
 
@@ -340,6 +351,54 @@ function downloadJSON() {
   link.click();
 }
 
+  // ================== SHOW DELETE MODAL ==================
+function showDeleteCategoryModal() {
+  const container = document.getElementById("categoryDeleteList");
+  container.innerHTML = "";
+
+  if (menuData.categories.length === 0) {
+    container.innerHTML = `<p class="text-center text-gray-500 py-8">Δεν υπάρχουν κατηγορίες</p>`;
+    document.getElementById("deleteCategoryModal").classList.remove("hidden");
+    return;
+  }
+
+  menuData.categories.forEach((cat, index) => {
+    const count = menuData.products.filter(p => p.category === cat.id).length;
+    const div = document.createElement("div");
+    div.className = "flex justify-between items-center bg-gray-50 p-4 rounded-2xl";
+    div.innerHTML = `
+      <div>
+        <div class="font-medium">${cat.name.el}</div>
+        <div class="text-sm text-gray-500">${count} προϊόντα</div>
+      </div>
+      <button onclick="confirmDeleteCategory(${index})" 
+              class="bg-red-600 text-white px-5 py-3 rounded-xl text-sm font-medium">
+        Διαγραφή
+      </button>
+    `;
+    container.appendChild(div);
+  });
+
+  document.getElementById("deleteCategoryModal").classList.remove("hidden");
+}
+
+// ================== CONFIRM DELETE ==================
+function confirmDeleteCategory(index) {
+  const cat = menuData.categories[index];
+  const productCount = menuData.products.filter(p => p.category === cat.id).length;
+
+  if (confirm(`⚠️ Θέλεις σίγουρα να διαγράψεις την κατηγορία "\( {cat.name.el}";\n\nΘα διαγραφούν και όλα τα προϊόντα της ( \){productCount});`)) {
+    menuData.products = menuData.products.filter(p => p.category !== cat.id);
+    menuData.categories.splice(index, 1);
+    renderCategories();
+    closeDeleteModal();
+    alert("✅ Η κατηγορία διαγράφηκε!");
+  }
+}
+
+function closeDeleteModal() {
+  document.getElementById("deleteCategoryModal").classList.add("hidden");
+}
 // ================== INIT ==================
 window.onload = () => {};
 </script>
