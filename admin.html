@@ -103,16 +103,16 @@ function renderCategories() {
     const count = menuData.products.filter(p => p.category === cat.id).length;
     
     const div = document.createElement("div");
-    div.className = "bg-white p-5 rounded-3xl shadow hover:shadow-xl flex items-center justify-between group";
+    div.className = "bg-white p-5 rounded-3xl shadow hover:shadow-xl flex items-center justify-between group cursor-pointer";
     
     div.innerHTML = `
-      <div onclick="showProducts('${cat.id}')" class="flex-1 cursor-pointer">
+      <div class="flex-1" onclick="showProducts('${cat.id}')">
         <h3 class="font-semibold text-xl">${cat.name.el}</h3>
         <p class="text-gray-500 mt-1">${count} προϊόντα</p>
       </div>
       
       <button onclick="deleteCategory(${index}); event.stopImmediatePropagation();" 
-              class="w-10 h-10 bg-red-100 hover:bg-red-200 text-red-600 rounded-2xl flex items-center justify-center text-xl opacity-0 group-hover:opacity-100 transition">
+              class="w-11 h-11 bg-red-100 hover:bg-red-200 text-red-600 rounded-2xl flex items-center justify-center text-2xl opacity-0 group-hover:opacity-100 transition-all">
         🗑
       </button>
     `;
@@ -121,30 +121,24 @@ function renderCategories() {
   });
 }
 
-  // ================== DELETE CATEGORY ==================
+ // ================== DELETE CATEGORY ==================
 function deleteCategory(index) {
   const cat = menuData.categories[index];
   const productCount = menuData.products.filter(p => p.category === cat.id).length;
 
-  if (productCount > 0) {
-    if (!confirm(`Η κατηγορία "${cat.name.el}" περιέχει ${productCount} προϊόντα.\n\nΘέλεις σίγουρα να τη διαγράψεις μαζί με όλα τα προϊόντα;`)) {
-      return;
-    }
-  } else {
-    if (!confirm(`Θέλεις σίγουρα να διαγράψεις την κατηγορία "${cat.name.el}";`)) {
-      return;
-    }
+  if (!confirm(`Θέλεις σίγουρα να διαγράψεις την κατηγορία "\( {cat.name.el}";\n\nΘα διαγραφούν και όλα τα προϊόντα της ( \){productCount} τεμάχια);`)) {
+    return;
   }
 
-  // Διαγραφή προϊόντων της κατηγορίας
+  // Διαγραφή προϊόντων
   menuData.products = menuData.products.filter(p => p.category !== cat.id);
   
   // Διαγραφή κατηγορίας
   menuData.categories.splice(index, 1);
 
   renderCategories();
-  alert("Η κατηγορία διαγράφηκε!");
-}
+  alert("✅ Η κατηγορία διαγράφηκε!");
+} 
 
 // ================== SHOW PRODUCTS ==================
 function showProducts(catId) {
