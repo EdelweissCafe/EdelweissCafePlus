@@ -1,1 +1,343 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edelweiss Café - Admin Panel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
 
+<div class="max-w-5xl mx-auto p-4">
+  <h1 class="text-3xl font-bold text-center my-8 text-green-700">Edelweiss Café - Admin Panel</h1>
+
+  <!-- Login -->
+  <div id="loginScreen" class="max-w-md mx-auto text-center">
+    <input type="password" id="password" placeholder="Κωδικός" 
+           class="border-2 border-gray-300 p-5 rounded-3xl text-center text-2xl w-full focus:outline-none focus:border-green-500">
+    <button type="button" onclick="login()" 
+            class="mt-6 bg-green-600 hover:bg-green-700 text-white px-12 py-5 rounded-3xl text-xl font-semibold w-full">
+      Είσοδος
+    </button>
+  </div>
+
+  <!-- Main Panel -->
+  <div id="adminPanel" class="hidden">
+    <div class="flex justify-between items-center mb-6 flex-wrap gap-3">
+      <h2 class="text-2xl font-semibold">Κατηγορίες</h2>
+      <div class="flex gap-2">
+        <button type="button" onclick="addNewCategory()" 
+                class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-1">
+          <i class="fas fa-plus text-xs"></i> Νέα Κατηγορία
+        </button>
+        <button type="button" onclick="showDeleteCategoryModal()" 
+                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-1">
+          <i class="fas fa-trash text-xs"></i> Διαγραφή Κατηγορίας
+        </button>
+        <button type="button" onclick="downloadJSON()" 
+                class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-1">
+          <i class="fas fa-download text-xs"></i> Αποθήκευση JSON
+        </button>
+      </div>
+    </div>
+
+    <!-- Λίστα κατηγοριών (ΧΩΡΙΣ το κουμπί διαγραφής) -->
+    <div id="categoriesList" class="space-y-3 mt-4"></div>
+  </div>
+</div>
+
+<!-- MODAL: Προϊόντα (ΤΑ ΚΟΥΜΠΙΑ ΤΩΝ ΠΡΟΪΟΝΤΩΝ ΜΕΝΟΥΝ ΑΝΕΠΑΦΑ) -->
+<div id="productModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+  <div class="bg-white w-full max-w-2xl mx-4 rounded-3xl p-6 max-h-[90vh] overflow-auto">
+    <h3 class="text-2xl font-bold mb-6" id="modalTitle"></h3>
+    <div id="productList" class="space-y-3"></div>
+    <button type="button" onclick="addNewProduct()" 
+            class="mt-6 w-full bg-green-600 text-white py-3 rounded-2xl font-semibold text-base">
+      + Νέο Προϊόν
+    </button>
+    <button type="button" onclick="closeModal()" 
+            class="mt-3 w-full bg-gray-200 py-3 rounded-2xl font-semibold">Κλείσιμο</button>
+  </div>
+</div>
+
+<!-- MODAL: Διαγραφή κατηγορίας -->
+<div id="deleteCategoryModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+  <div class="bg-white w-full max-w-md mx-4 rounded-3xl p-6">
+    <h3 class="text-xl font-bold mb-6 text-red-600">Διαγραφή Κατηγορίας</h3>
+    <div id="categoryDeleteList" class="space-y-3"></div>
+    <button type="button" onclick="closeDeleteModal()" 
+            class="mt-6 w-full bg-gray-300 py-3 rounded-2xl">Κλείσιμο</button>
+  </div>
+</div>
+
+<script>
+// ================== CONFIG ==================
+const PASSWORD = "1234";
+let menuData = { categories: [], products: [] };
+let currentCategoryId = null;
+
+const languages = [
+  {code: "el", name: "🇬🇷 Ελληνικά"},
+  {code: "en", name: "🇬🇧 English"},
+  {code: "fr", name: "🇫🇷 Français"},
+  {code: "de", name: "🇩🇪 Deutsch"},
+  {code: "it", name: "🇮🇹 Italiano"},
+  {code: "es", name: "🇪🇸 Español"},
+  {code: "ru", name: "🇷🇺 Русский"},
+  {code: "sr", name: "🇷🇸 Srpski"},
+  {code: "bg", name: "🇧🇬 Български"},
+  {code: "ro", name: "🇷🇴 Română"},
+  {code: "sq", name: "🇦🇱 Shqip"},
+  {code: "tr", name: "🇹🇷 Türkçe"}
+];
+
+function login() {
+  if (document.getElementById("password").value === PASSWORD) {
+    document.getElementById("loginScreen").classList.add("hidden");
+    document.getElementById("adminPanel").classList.remove("hidden");
+    loadMenu();
+  } else {
+    alert("Λάθος κωδικός!");
+  }
+}
+
+async function loadMenu() {
+  try {
+    const res = await fetch('menu.json?' + Date.now());
+    menuData = await res.json();
+    renderCategories();
+  } catch(e) {
+    alert("Δεν βρέθηκε το menu.json. Θα ξεκινήσετε με άδειο μενού.");
+    menuData = { categories: [], products: [] };
+    renderCategories();
+  }
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return str.replace(/[&<>]/g, function(m) {
+    if (m === '&') return '&amp;';
+    if (m === '<') return '&lt;';
+    if (m === '>') return '&gt;';
+    return m;
+  });
+}
+
+// ========== ΚΑΤΗΓΟΡΙΕΣ (ΧΩΡΙΣ ΚΟΥΜΠΙ ΔΙΑΓΡΑΦΗΣ) ==========
+function renderCategories() {
+  const container = document.getElementById("categoriesList");
+  if (!container) return;
+  container.innerHTML = "";
+
+  menuData.categories.forEach((cat) => {
+    const count = menuData.products.filter(p => p.category === cat.id).length;
+    const div = document.createElement("div");
+    div.className = "bg-white p-5 rounded-3xl shadow flex items-center justify-between cursor-pointer hover:bg-gray-50 transition";
+    div.onclick = () => showProducts(cat.id);
+    div.innerHTML = `
+      <div class="flex-1">
+        <h3 class="font-semibold text-xl">${escapeHtml(cat.name.el)}</h3>
+        <p class="text-gray-500 mt-1">${count} προϊόντα</p>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+// ========== ΠΡΟΪΟΝΤΑ (ΤΑ ΚΟΥΜΠΙΑ ΕΠΕΞΕΡΓΑΣΙΑΣ ΚΑΙ ΔΙΑΓΡΑΦΗΣ ΥΠΑΡΧΟΥΝ) ==========
+function showProducts(catId) {
+  currentCategoryId = catId;
+  const cat = menuData.categories.find(c => c.id === catId);
+  if (!cat) return;
+  document.getElementById("modalTitle").textContent = cat.name.el;
+
+  const products = menuData.products.filter(p => p.category === catId);
+  const container = document.getElementById("productList");
+  container.innerHTML = "";
+
+  products.forEach((product, idx) => {
+    const globalIndex = menuData.products.findIndex(p => p === product);
+    const div = document.createElement("div");
+    div.className = "bg-gray-50 p-4 rounded-2xl flex items-center gap-3";
+    div.innerHTML = `
+      <div class="flex flex-col gap-1">
+        <button type="button" onclick="moveProduct(${globalIndex}, -1)" class="w-7 h-7 bg-white hover:bg-green-100 rounded-lg text-sm">↑</button>
+        <button type="button" onclick="moveProduct(${globalIndex}, 1)"  class="w-7 h-7 bg-white hover:bg-green-100 rounded-lg text-sm">↓</button>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="font-semibold truncate">${escapeHtml(product.name.el)}</div>
+        <div class="text-green-600 font-medium">${product.price} €</div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <button type="button" onclick="editProduct(${globalIndex})" class="w-9 h-9 bg-blue-600 text-white rounded-xl flex items-center justify-center text-lg">✏️</button>
+        <button type="button" onclick="deleteProduct(${globalIndex})" class="w-9 h-9 bg-red-600 text-white rounded-xl flex items-center justify-center text-lg">🗑</button>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+
+  document.getElementById("productModal").classList.remove("hidden");
+}
+
+function moveProduct(index, direction) {
+  const newIndex = index + direction;
+  if (newIndex < 0 || newIndex >= menuData.products.length) return;
+  [menuData.products[index], menuData.products[newIndex]] = [menuData.products[newIndex], menuData.products[index]];
+  showProducts(currentCategoryId);
+}
+
+function editProduct(index) {
+  const p = menuData.products[index];
+  let html = `<div class="space-y-6">`;
+  languages.forEach(lang => {
+    const nameValue = (p.name && p.name[lang.code]) ? p.name[lang.code] : '';
+    const descValue = (p.description && p.description[lang.code]) ? p.description[lang.code] : '';
+    html += `
+      <div class="border-b pb-5">
+        <label class="block text-sm font-medium mb-2">${lang.name}</label>
+        <input type="text" id="name_${lang.code}" value="${escapeHtml(nameValue)}" class="w-full p-3 border rounded-2xl">
+        <textarea id="desc_${lang.code}" class="w-full p-3 border rounded-2xl h-24 mt-2">${escapeHtml(descValue)}</textarea>
+      </div>`;
+  });
+  html += `
+    <div class="grid grid-cols-2 gap-4 mt-4">
+      <div><label>Τιμή (€)</label><input type="number" id="price" step="0.10" value="${p.price}" class="w-full p-3 border rounded-2xl"></div>
+      <div><label>Φωτογραφία</label><input type="text" id="image" value="${escapeHtml(p.image || '')}" class="w-full p-3 border rounded-2xl"></div>
+    </div>`;
+  const container = document.getElementById("productList");
+  container.innerHTML = html;
+  container.innerHTML += `
+    <div class="flex gap-3 mt-8">
+      <button type="button" onclick="saveProduct(${index})" class="flex-1 bg-green-600 text-white py-3 rounded-2xl font-semibold">💾 Αποθήκευση</button>
+      <button type="button" onclick="translateAll(${index})" class="flex-1 bg-purple-600 text-white py-3 rounded-2xl font-semibold">🌐 Μετάφραση</button>
+    </div>
+    <button type="button" onclick="showProducts('${p.category}')" class="mt-3 w-full bg-gray-300 py-3 rounded-2xl">← Επιστροφή</button>
+  `;
+}
+
+function saveProduct(index) {
+  const p = menuData.products[index];
+  languages.forEach(lang => {
+    p.name[lang.code] = document.getElementById(`name_${lang.code}`).value;
+    p.description[lang.code] = document.getElementById(`desc_${lang.code}`).value;
+  });
+  p.price = parseFloat(document.getElementById("price").value) || 0;
+  p.image = document.getElementById("image").value;
+  alert("✅ Το προϊόν αποθηκεύτηκε!");
+  showProducts(p.category);
+}
+
+async function translateAll(index) {
+  const p = menuData.products[index];
+  const textName = p.name.el;
+  const textDesc = p.description.el;
+  if (!textName) { alert("Πρώτα συμπλήρωσε το Ελληνικό όνομα!"); return; }
+  for (let lang of languages) {
+    if (lang.code === "el") continue;
+    try {
+      let resName = await fetch('https://libretranslate.de/translate', {
+        method: 'POST', body: JSON.stringify({ q: textName, source: 'el', target: lang.code, format: 'text' }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+      let dataName = await resName.json();
+      if (dataName.translatedText) p.name[lang.code] = dataName.translatedText;
+      if (textDesc) {
+        let resDesc = await fetch('https://libretranslate.de/translate', {
+          method: 'POST', body: JSON.stringify({ q: textDesc, source: 'el', target: lang.code, format: 'text' }),
+          headers: { 'Content-Type': 'application/json' }
+        });
+        let dataDesc = await resDesc.json();
+        if (dataDesc.translatedText) p.description[lang.code] = dataDesc.translatedText;
+      }
+    } catch(e) { console.warn(lang.code, e); }
+  }
+  alert("✅ Μεταφράστηκαν όνομα και περιγραφή!");
+  editProduct(index);
+}
+
+function addNewProduct() {
+  const nameEl = prompt("Όνομα προϊόντος στα Ελληνικά:");
+  if (!nameEl) return;
+  menuData.products.push({
+    category: currentCategoryId,
+    name: { el: nameEl, en: "", fr: "", de: "", it: "", es: "", ru: "", sr: "", bg: "", ro: "", sq: "", tr: "" },
+    description: { el: "", en: "", fr: "", de: "", it: "", es: "", ru: "", sr: "", bg: "", ro: "", sq: "", tr: "" },
+    price: 0,
+    image: "foto/NEW.jpg"
+  });
+  showProducts(currentCategoryId);
+}
+
+function deleteProduct(index) {
+  if (confirm("Θέλεις σίγουρα να διαγράψεις αυτό το προϊόν;")) {
+    menuData.products.splice(index, 1);
+    showProducts(currentCategoryId);
+  }
+}
+
+function addNewCategory() {
+  const nameEl = prompt("Όνομα νέας κατηγορίας στα Ελληνικά:");
+  if (!nameEl) return;
+  const newId = "cat_" + Date.now();
+  const newNameObj = {};
+  languages.forEach(lang => { newNameObj[lang.code] = nameEl; });
+  menuData.categories.push({ id: newId, name: newNameObj });
+  renderCategories();
+  alert("Η κατηγορία προστέθηκε!");
+}
+
+function showDeleteCategoryModal() {
+  const container = document.getElementById("categoryDeleteList");
+  container.innerHTML = "";
+  if (menuData.categories.length === 0) {
+    container.innerHTML = `<p class="text-center text-gray-500 py-8">Δεν υπάρχουν κατηγορίες</p>`;
+    document.getElementById("deleteCategoryModal").classList.remove("hidden");
+    return;
+  }
+  menuData.categories.forEach((cat, index) => {
+    const count = menuData.products.filter(p => p.category === cat.id).length;
+    const div = document.createElement("div");
+    div.className = "flex justify-between items-center bg-gray-50 p-4 rounded-2xl";
+    div.innerHTML = `
+      <div><div class="font-medium">${escapeHtml(cat.name.el)}</div><div class="text-sm text-gray-500">${count} προϊόντα</div></div>
+      <button type="button" onclick="confirmDeleteCategory(${index})" class="bg-red-600 text-white px-5 py-2 rounded-xl text-sm font-medium">Διαγραφή</button>
+    `;
+    container.appendChild(div);
+  });
+  document.getElementById("deleteCategoryModal").classList.remove("hidden");
+}
+
+function confirmDeleteCategory(index) {
+  const cat = menuData.categories[index];
+  const productCount = menuData.products.filter(p => p.category === cat.id).length;
+  if (confirm(`⚠️ Θέλεις σίγουρα να διαγράψεις την κατηγορία "${cat.name.el}"\n\nΘα διαγραφούν και όλα τα προϊόντα της (${productCount});`)) {
+    if (currentCategoryId === cat.id) closeModal();
+    menuData.products = menuData.products.filter(p => p.category !== cat.id);
+    menuData.categories.splice(index, 1);
+    renderCategories();
+    closeDeleteModal();
+    alert("✅ Η κατηγορία διαγράφηκε!");
+  }
+}
+
+function closeModal() {
+  document.getElementById("productModal").classList.add("hidden");
+  currentCategoryId = null;
+}
+
+function closeDeleteModal() {
+  document.getElementById("deleteCategoryModal").classList.add("hidden");
+}
+
+function downloadJSON() {
+  const dataStr = JSON.stringify(menuData, null, 2);
+  const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+  const link = document.createElement('a');
+  link.href = dataUri;
+  link.download = 'menu.json';
+  link.click();
+}
+</script>
+</body>
+</html>
