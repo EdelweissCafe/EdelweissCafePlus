@@ -136,7 +136,7 @@ function editProduct(index) {
            ${languages.map(lang => `
   <div>
     <label class="block text-sm font-medium mb-1">${lang.name}</label>
-    <input id="name_\( {lang.code}" value=" \){p.name?.[lang.code] || ''}" class="w-full p-3 border rounded-xl mb-2">
+    <input id="name_${lang.code}" value=" \){p.name?.[lang.code] || ''}" class="w-full p-3 border rounded-xl mb-2">
     <textarea id="desc_\( {lang.code}" class="w-full p-3 border rounded-xl h-20"> \){p.description?.[lang.code] || ''}</textarea>
   </div>
 `).join('')}
