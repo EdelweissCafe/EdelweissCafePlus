@@ -1,1 +1,366 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edelweiss Café • Menu</title>
+  <style>
+    :root { --primary: #1e2a1e; --accent: #d4af37; --light: #f8f5f0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: var(--light); color: #333; }
 
+    header { 
+      background: var(--primary); 
+      color: white; 
+      text-align: center; 
+      padding: 20px 10px 15px; 
+    }
+    .logo { 
+      width: 170px; 
+      height: 170px; 
+      border-radius: 50%; 
+      border: 8px solid var(--accent); 
+      margin-bottom: 15px; 
+    }
+    h1 { margin-bottom: 15px; font-size: 2.1em; }
+
+    .lang-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px 10px 20px;
+      background: var(--primary);
+    }
+    .lang-btn {
+      font-size: 24px;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 50%;
+      cursor: pointer;
+      background: rgba(255,255,255,0.1);
+    }
+    .lang-btn.active {
+      border-color: var(--accent);
+      background: rgba(212,175,55,0.3);
+      transform: scale(1.1);
+    }
+
+    .categories { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 8px; 
+      justify-content: center; 
+      padding: 12px 10px; 
+      background: white; 
+      border-bottom: 1px solid #ddd;
+    }
+    .cat-btn { 
+      padding: 9px 16px; 
+      border: 1px solid #ccc; 
+      background: white; 
+      border-radius: 30px; 
+      cursor: pointer; 
+      font-size: 14.5px;
+      white-space: nowrap;
+    }
+    .cat-btn.active { 
+      background: var(--accent); 
+      color: black; 
+      font-weight: bold; 
+    }
+
+    .products { padding: 15px; max-width: 1200px; margin: 0 auto; }
+    .product {
+      display: flex; 
+      background: white; 
+      margin-bottom: 16px; 
+      border-radius: 16px; 
+      overflow: hidden; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .product img { width: 130px; height: 130px; object-fit: cover; }
+    .product-info { padding: 15px; flex: 1; }
+    
+    .product-name { 
+      font-size: 1.32em !important; 
+      font-weight: 700 !important; 
+      margin-bottom: 6px; 
+      color: #1e2a1e;
+      line-height: 1.25;
+    }
+    .product-desc { 
+      color: #555; 
+      font-size: 0.84em !important; 
+      margin-bottom: 10px; 
+      line-height: 1.4; 
+    }
+    .price { 
+      font-size: 1.55em; 
+      font-weight: bold; 
+      color: var(--primary); 
+      text-align: right; 
+    }
+
+    .info-section {
+      text-align: center;
+      padding: 40px 15px 60px;
+    }
+    .info-btn {
+      padding: 14px 32px;
+      background: #1e2a1e;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Modal styling */
+    .hidden {
+      display: none !important;
+    }
+    .fixed {
+      position: fixed;
+    }
+    .inset-0 {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .bg-black\/70 {
+      background-color: rgba(0,0,0,0.7);
+    }
+    .flex {
+      display: flex;
+    }
+    .items-center {
+      align-items: center;
+    }
+    .justify-center {
+      justify-content: center;
+    }
+    .z-\[100\] {
+      z-index: 100;
+    }
+    .rounded-3xl {
+      border-radius: 1.5rem;
+    }
+    .p-7 {
+      padding: 1.75rem;
+    }
+    .max-h-\[85vh\] {
+      max-height: 85vh;
+    }
+    .overflow-auto {
+      overflow: auto;
+    }
+    .bg-white {
+      background-color: white;
+    }
+    .w-full {
+      width: 100%;
+    }
+    .max-w-lg {
+      max-width: 32rem;
+    }
+    .mx-4 {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+    .font-bold {
+      font-weight: 700;
+    }
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .text-gray-800 {
+      color: #1f2937;
+    }
+    .space-y-6 > * + * {
+      margin-top: 1.5rem;
+    }
+    .text-\[15px\] {
+      font-size: 15px;
+    }
+    .leading-relaxed {
+      line-height: 1.625;
+    }
+    .text-gray-700 {
+      color: #374151;
+    }
+    .relative {
+      position: relative;
+    }
+    .close-x {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-weight: bold;
+      color: #555;
+    }
+    .close-x:hover {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Edelweiss Café" class="logo">
+    <h1>Edelweiss Café</h1>
+    <div class="lang-buttons" id="langButtons"></div>
+  </header>
+
+  <div class="categories" id="categories"></div>
+  <div class="products" id="products"></div>
+
+  <!-- Κουμπί Πληροφορίες - μόνο για άνοιγμα -->
+  <div class="info-section">
+    <button onclick="openInfo()" class="info-btn">ℹ️ Πληροφορίες &amp; Όροι</button>
+  </div>
+
+  <!-- Info Modal με κουμπί κλεισίματος (Χ) -->
+  <div id="infoModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]" onclick="closeInfoOnBackground(event)">
+    <div class="bg-white w-full max-w-lg mx-4 rounded-3xl p-7 max-h-[85vh] overflow-auto relative">
+      <button class="close-x" onclick="closeInfo()">✖</button>
+      <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Νομικές Πληροφορίες &amp; Όροι</h2>
+      <div id="infoContent" class="space-y-6 text-[15px] leading-relaxed text-gray-700"></div>
+    </div>
+  </div>
+
+  <script>
+    let currentLang = 'el';
+    let currentCategory = null;
+    let menuData = { categories: [], products: [] };
+
+    const flags = {
+      el: "🇬🇷", en: "🇬🇧", fr: "🇫🇷", de: "🇩🇪", it: "🇮🇹", es: "🇪🇸",
+      ru: "🇷🇺", sr: "🇷🇸", bg: "🇧🇬", ro: "🇷🇴", sq: "🇦🇱", tr: "🇹🇷"
+    };
+
+    async function loadMenu() {
+      try {
+        const res = await fetch('menu.json?' + Date.now());
+        menuData = await res.json();
+        renderLanguages();
+        renderCategories();
+        if (menuData.categories.length > 0) showCategory(menuData.categories[0].id);
+      } catch(e) { console.error(e); }
+    }
+
+    function renderLanguages() {
+      const container = document.getElementById('langButtons');
+      container.innerHTML = '';
+      Object.keys(flags).forEach(lang => {
+        const btn = document.createElement('button');
+        btn.className = `lang-btn ${lang === currentLang ? 'active' : ''}`;
+        btn.innerHTML = flags[lang];
+        btn.onclick = () => { 
+          currentLang = lang; 
+          renderLanguages(); 
+          renderCategories(); 
+          if (currentCategory) showCategory(currentCategory); 
+        };
+        container.appendChild(btn);
+      });
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('categories');
+      container.innerHTML = '';
+      menuData.categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = `cat-btn ${cat.id === currentCategory ? 'active' : ''}`;
+        btn.textContent = cat.name[currentLang] || cat.name.el;
+        btn.onclick = () => showCategory(cat.id);
+        container.appendChild(btn);
+      });
+    }
+
+    function showCategory(catId) {
+      currentCategory = catId;
+      renderCategories();
+      const container = document.getElementById('products');
+      const cat = menuData.categories.find(c => c.id === catId);
+      container.innerHTML = `<h2 style="text-align:center; margin:25px 0 20px; color:#1e2a1e;">${cat.name[currentLang] || cat.name.el}</h2>`;
+
+      const filtered = menuData.products.filter(p => p.category === catId);
+
+      if (filtered.length === 0) {
+        container.innerHTML += `<p style="text-align:center; padding:60px; color:#666;">Δεν υπάρχουν προϊόντα ακόμα.</p>`;
+        return;
+      }
+
+      filtered.forEach(product => {
+        const div = document.createElement('div');
+        div.className = 'product';
+        div.innerHTML = `
+          <img src="${product.image}" alt="">
+          <div class="product-info">
+            <div class="product-name">${product.name[currentLang] || product.name.el}</div>
+            <div class="product-desc">${product.description ? (product.description[currentLang] || product.description.el || '') : ''}</div>
+            <div class="price">${product.price.toFixed(2)} €</div>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    // Άνοιγμα modal (μόνο αν είναι κλειστό)
+    function openInfo() {
+      const modal = document.getElementById("infoModal");
+      if (modal.classList.contains("hidden")) {
+        const content = document.getElementById("infoContent");
+        if (currentLang === "el") {
+          content.innerHTML = `
+            <p><strong>Απαγόρευση κατανάλωσης αλκοόλ:</strong> Απαγορεύεται η πώληση και κατανάλωση αλκοολούχων ποτών σε άτομα κάτω των 18 ετών.</p>
+            <p><strong>Αλλεργιογόνα:</strong> Τα προϊόντα μας ενδέχεται να περιέχουν αλλεργιογόνα. Παρακαλούμε ενημερώστε το προσωπικό για τυχόν αλλεργίες.</p>
+            <p><strong>ΦΠΑ &amp; Φόροι:</strong> Οι αναγραφόμενες τιμές περιλαμβάνουν ΦΠΑ και Δημοτικό Φόρο.</p>
+            <p><strong>Αλλαγή τιμών:</strong> Το κατάστημα διατηρεί το δικαίωμα αλλαγής τιμών χωρίς προηγούμενη ειδοποίηση.</p>
+            <p><strong>Παραστατικά:</strong> Ο πελάτης δεν υποχρεούται να πληρώσει εάν δεν λάβει νόμιμο παραστατικό (απόδειξη ή τιμολόγιο).</p>
+          `;
+        } else {
+          content.innerHTML = `
+            <p><strong>Alcohol restriction:</strong> Alcoholic beverages are not allowed to be supplied to persons under 18 years of age.</p>
+            <p><strong>Allergens:</strong> Our products may contain allergens. Please inform the staff of any allergies.</p>
+            <p><strong>VAT &amp; Taxes:</strong> All listed prices include VAT and Municipality Tax.</p>
+            <p><strong>Price changes:</strong> The establishment reserves the right to change prices without prior notice.</p>
+            <p><strong>Receipt:</strong> The customer is not obliged to pay if a legal receipt or invoice is not issued.</p>
+          `;
+        }
+        modal.classList.remove("hidden");
+      }
+    }
+
+    // Κλείσιμο modal
+    function closeInfo() {
+      document.getElementById("infoModal").classList.add("hidden");
+    }
+
+    // Κλείσιμο αν πατήσει κανείς στο σκούρο background (έξω από το λευκό πλαίσιο)
+    function closeInfoOnBackground(event) {
+      // Αν ο στόχος του click είναι το ίδιο το overlay (το div με την κλάση bg-black/70), τότε κλείσε
+      if (event.target === event.currentTarget) {
+        closeInfo();
+      }
+    }
+
+    loadMenu();
+  </script>
+</body>
+</html>
