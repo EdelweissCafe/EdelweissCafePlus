@@ -324,7 +324,7 @@
     {
       "category": "kafe",
       "name": {
-        "el": "Espresso",
+        "el": "Εσπρέσσο",
         "en": "Espresso",
         "fr": "Espresso",
         "de": "Espresso",
@@ -390,7 +390,7 @@
     {
       "category": "kafe",
       "name": {
-        "el": "Espresso Διπλός",
+        "el": "Εσπρέσσο Διπλός",
         "en": "Double Espresso",
         "fr": "Espresso Double",
         "de": "Doppelter Espresso",
@@ -423,7 +423,7 @@
     {
       "category": "kafe",
       "name": {
-        "el": "Freddo Espresso",
+        "el": "Φρέντο Εσπρέσσο",
         "en": "Freddo Espresso",
         "fr": "Espresso Froid",
         "de": "Freddo Espresso",
@@ -456,7 +456,7 @@
     {
       "category": "kafe",
       "name": {
-        "el": "Cappuccino",
+        "el": "Καπουτσίνο",
         "en": "Cappuccino",
         "fr": "Cappuccino",
         "de": "Cappuccino",
@@ -522,7 +522,7 @@
     {
       "category": "kafe",
       "name": {
-        "el": "Freddo Cappuccino",
+        "el": "Φρέντο Καπουτσίνο",
         "en": "Freddo Cappuccino",
         "fr": "Cappuccino Froid",
         "de": "Freddo Cappuccino",
@@ -588,7 +588,7 @@
     {
       "category": "kafe",
       "name": {
-        "el": "Latte",
+        "el": "Λάτε",
         "en": "Latte",
         "fr": "Latte",
         "de": "Latte",
@@ -934,7 +934,7 @@
       "price": 4.5,
       "image": "foto/C1.jpg",
       "description": {
-        "el": "Φρέσκο πορτοκάλι στιμμένο",
+        "el": "Φρέσκο πορτοκάλι στυμμένο",
         "en": "Freshly squeezed orange",
         "fr": "Orange fraîchement pressée",
         "de": "Frisch gepresste Orange",
@@ -1030,7 +1030,7 @@
         "sq": "Limonatë shtëpiake",
         "tr": "Ev Yapımı Limonata"
       },
-      "price": 4,
+      "price": 3,5,
       "image": "foto/C4.jpg",
       "description": {
         "el": "Ντόπια σπιτική λεμονάδα",
@@ -1149,7 +1149,7 @@
     {
       "category": "smoothies",
       "name": {
-        "el": "Φράουλα, Μπανάνα, Κεράσι",
+        "el": "1. Φράουλα, Μπανάνα, Κεράσι",
         "en": "Strawberry, Banana, Cherry",
         "fr": "Fraise, Banane, Cerise",
         "de": "Erdbeere, Banane, Kirsche",
@@ -1182,7 +1182,7 @@
     {
       "category": "smoothies",
       "name": {
-        "el": "Παπάγια, Μάνγκο, Ανανάς",
+        "el": "2. Παπάγια, Μάνγκο, Ανανάς",
         "en": "Papaya, Mango, Pineapple",
         "fr": "Papaye, Mangue, Ananas",
         "de": "Papaya, Mango, Ananas",
@@ -1215,7 +1215,7 @@
     {
       "category": "smoothies",
       "name": {
-        "el": "Σμέουρο, Μύρτιλο, Μπανάνα",
+        "el": "3. Σμέουρο, Μύρτιλο, Μπανάνα",
         "en": "Raspberry, Blueberry, Banana",
         "fr": "Framboise, Myrtille, Banane",
         "de": "Himbeere, Blaubeere, Banane",
@@ -1248,7 +1248,7 @@
     {
       "category": "smoothies",
       "name": {
-        "el": "Πεπόνι, Μάνγκο, Ανανάς, Ακτινίδιο",
+        "el": "4. Πεπόνι, Μάνγκο, Ανανάς, Ακτινίδιο",
         "en": "Melon, Mango, Pineapple, Kiwi",
         "fr": "Melon, Mangue, Ananas, Kiwi",
         "de": "Melone, Mango, Ananas, Kiwi",
@@ -1281,7 +1281,7 @@
     {
       "category": "smoothies",
       "name": {
-        "el": "Μπανάνα, Καρύδα, Ανανάς",
+        "el": "5. Μπανάνα, Καρύδα, Ανανάς",
         "en": "Banana, Coconut, Pineapple",
         "fr": "Banane, Noix de Coco, Ananas",
         "de": "Banane, Kokos, Ananas",
@@ -1314,7 +1314,7 @@
     {
       "category": "smoothies",
       "name": {
-        "el": "Καρότο, Πράσινο Μήλο, Μάνγκο, Παπάγια",
+        "el": "6. Καρότο, Πράσινο Μήλο, Μάνγκο, Παπάγια",
         "en": "Carrot, Green Apple, Mango, Papaya",
         "fr": "Carotte, Pomme Verte, Mangue, Papaye",
         "de": "Karotte, Grüner Apfel, Mango, Papaya",
