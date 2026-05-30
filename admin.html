@@ -232,27 +232,51 @@ async function translateAll(index) {
   const p = menuData.products[index];
   const textName = p.name.el;
   const textDesc = p.description.el;
-  if (!textName) { alert("Πρώτα συμπλήρωσε το Ελληνικό όνομα!"); return; }
+  
+  if (!textName) { 
+    alert("Πρώτα συμπλήρωσε το Ελληνικό όνομα!"); 
+    return; 
+  }
+  
   for (let lang of languages) {
     if (lang.code === "el") continue;
+    
     try {
-      let resName = await fetch('https://libretranslate.de/translate', {
-        method: 'POST', body: JSON.stringify({ q: textName, source: 'el', target: lang.code, format: 'text' }),
+      // Μετάφραση ονόματος
+      const responseName = await fetch('https://api.mymemory.translated.net/get', {
+        method: 'GET',
         headers: { 'Content-Type': 'application/json' }
       });
-      let dataName = await resName.json();
-      if (dataName.translatedText) p.name[lang.code] = dataName.translatedText;
-      if (textDesc) {
-        let resDesc = await fetch('https://libretranslate.de/translate', {
-          method: 'POST', body: JSON.stringify({ q: textDesc, source: 'el', target: lang.code, format: 'text' }),
-          headers: { 'Content-Type': 'application/json' }
-        });
-        let dataDesc = await resDesc.json();
-        if (dataDesc.translatedText) p.description[lang.code] = dataDesc.translatedText;
+      
+      // Χρησιμοποιώ MyMemory API (πιο αξιόπιστο και χωρίς CORS issues)
+      const urlName = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textName)}&langpair=el|${lang.code}`;
+      const resName = await fetch(urlName);
+      const dataName = await resName.json();
+      
+      if (dataName.responseData && dataName.responseData.translatedText) {
+        p.name[lang.code] = dataName.responseData.translatedText;
       }
-    } catch(e) { console.warn(lang.code, e); }
+      
+      // Μετάφραση περιγραφής (αν υπάρχει)
+      if (textDesc && textDesc.trim() !== "") {
+        const urlDesc = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textDesc)}&langpair=el|${lang.code}`;
+        const resDesc = await fetch(urlDesc);
+        const dataDesc = await resDesc.json();
+        
+        if (dataDesc.responseData && dataDesc.responseData.translatedText) {
+          p.description[lang.code] = dataDesc.responseData.translatedText;
+        }
+      }
+      
+      // Μικρή καθυστέρηση για να μην "πνίξουμε" το API
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+    } catch(e) { 
+      console.warn(`Σφάλμα μετάφρασης για ${lang.code}:`, e); 
+    }
   }
-  alert("✅ Μεταφράστηκαν όνομα και περιγραφή!");
+  
+  alert("✅ Μεταφράστηκαν όνομα και περιγραφή για όλες τις γλώσσες!");
   editProduct(index);
 }
 
