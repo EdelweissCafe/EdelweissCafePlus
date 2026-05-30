@@ -238,45 +238,44 @@ async function translateAll(index) {
     return; 
   }
   
+  alert("Ξεκινάει η μετάφραση... Μπορεί να πάρει λίγα δευτερόλεπτα.");
+  
   for (let lang of languages) {
     if (lang.code === "el") continue;
     
     try {
-      // Μετάφραση ονόματος
-      const responseName = await fetch('https://api.mymemory.translated.net/get', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' }
-      });
-      
-      // Χρησιμοποιώ MyMemory API (πιο αξιόπιστο και χωρίς CORS issues)
-      const urlName = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textName)}&langpair=el|${lang.code}`;
+      // Δοκιμάζουμε πρώτα το MyMemory API (πιο αξιόπιστο)
+      const urlName = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textName)}&langpair=el|${lang.code}&de=someone@edelweiss.gr`;
       const resName = await fetch(urlName);
       const dataName = await resName.json();
       
-      if (dataName.responseData && dataName.responseData.translatedText) {
+      if (dataName && dataName.responseData && dataName.responseData.translatedText) {
         p.name[lang.code] = dataName.responseData.translatedText;
+        console.log(`✅ ${lang.code} όνομα: ${p.name[lang.code]}`);
       }
       
-      // Μετάφραση περιγραφής (αν υπάρχει)
+      // Μετάφραση περιγραφής
       if (textDesc && textDesc.trim() !== "") {
-        const urlDesc = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textDesc)}&langpair=el|${lang.code}`;
+        const urlDesc = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textDesc)}&langpair=el|${lang.code}&de=someone@edelweiss.gr`;
         const resDesc = await fetch(urlDesc);
         const dataDesc = await resDesc.json();
         
-        if (dataDesc.responseData && dataDesc.responseData.translatedText) {
+        if (dataDesc && dataDesc.responseData && dataDesc.responseData.translatedText) {
           p.description[lang.code] = dataDesc.responseData.translatedText;
+          console.log(`✅ ${lang.code} περιγραφή: ${p.description[lang.code].substring(0, 50)}...`);
         }
       }
       
-      // Μικρή καθυστέρηση για να μην "πνίξουμε" το API
-      await new Promise(resolve => setTimeout(resolve, 100));
+      // Μικρή καθυστέρηση
+      await new Promise(resolve => setTimeout(resolve, 200));
       
     } catch(e) { 
-      console.warn(`Σφάλμα μετάφρασης για ${lang.code}:`, e); 
+      console.error(`❌ Σφάλμα για ${lang.code}:`, e);
+      p.name[lang.code] = textName; // Αν αποτύχει, βάζει το ελληνικό
     }
   }
   
-  alert("✅ Μεταφράστηκαν όνομα και περιγραφή για όλες τις γλώσσες!");
+  alert("✅ Ολοκληρώθηκε η μετάφραση! Πατήστε ΟΚ για να δείτε τα αποτελέσματα.");
   editProduct(index);
 }
 
