@@ -1,1 +1,9 @@
-
+body { font-family: Arial, sans-serif; margin: 20px; }
+.product { border: 1px solid #ccc; padding: 10px; margin: 10px; display: flex; align-items: center; }
+.product img { width: 80px; height: 80px; margin-right: 10px; object-fit: cover; }
+.product-details { flex-grow: 1; }
+.product-name { font-weight: bold; }
+.product-price { color: green; margin-top: 5px; }
+.quantity { width: 50px; }
+#cart { margin-top: 20px; border-top: 2px solid #000; padding-top: 10px; }
+#submitOrder { margin-top: 10px; padding: 10px 20px; font-size: 16px; }
