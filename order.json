@@ -1,1 +1,103 @@
-
+{
+  "tables": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
+  "categories": [
+    {
+      "id": "kafe",
+      "name": {"el":"Καφέδες"}
+    },
+    {
+      "id": "rofimata",
+      "name": {"el":"Ροφήματα"}
+    },
+    {
+      "id": "chymoi",
+      "name": {"el":"Χυμοί"}
+    }
+  ],
+  "products": [
+    {
+      "category": "kafe",
+      "name": {"el":"Ελληνικός"},
+      "price": 2.5,
+      "image": "foto/A1.jpg",
+      "description": {"el":"Ο παραδοσιακός Ελληνικός καφές"}
+    },
+    {
+      "category": "kafe",
+      "name": {"el":"Ελληνικός Διπλός"},
+      "price": 3.5,
+      "image": "foto/A2.jpg",
+      "description": {"el":"Διπλή απόλαυση"}
+    },
+    {
+      "category": "kafe",
+      "name": {"el":"Νες Καφέ / Φραπέ"},
+      "price": 3.5,
+      "image": "foto/A3.jpg",
+      "description": {"el":"Ο αυθεντικός Νες Καφέ. Ζεστός ή Κρύος"}
+    },
+    {
+      "category": "kafe",
+      "name": {"el":"Μακιάτο"},
+      "price": 2.7,
+      "image": "foto/A4.jpg",
+      "description": {"el":"Εσπρέσσο με μια νότα γάλα"}
+    },
+    {
+      "category": "kafe",
+      "name": {"el":"Εσπρέσσο"},
+      "price": 2.2,
+      "image": "foto/A5.jpg",
+      "description": {"el":"Ο αυθεντικός εσπρέσσο illy"}
+    },
+    {
+      "category": "kafe",
+      "name": {"el":"Αμερικάνο"},
+      "price": 3,
+      "image": "foto/A6.jpg",
+      "description": {"el":"Ο ελαφρύς εσπρέσσο"}
+    },
+    {
+      "category": "kafe",
+      "name": {"el":"Εσπρέσσο Διπλός"},
+      "price": 3.5,
+      "image": "foto/A7.jpg",
+      "description": {"el":"Για όσους δεν φτάνει μια δόση μόνο"}
+    },
+    {
+      "category": "kafe",
+      "name": {"el":"Φρέντο Εσπρέσσο"},
+      "price": 3.5,
+      "image": "foto/A8.jpg",
+      "description": {"el":"Ο κρύος δυνατός εσπρέσσο με διπλή δόση"}
+    },
+    {
+      "category": "kafe",
+      "name": {"el":"Καπουτσίνο"},
+      "price": 3.5,
+      "image": "foto/A9.jpg",
+      "description": {"el":"Ο κλασικός καφές με γάλα"}
+    },
+    {
+      "category": "kafe",
+      "name": {"el":"Φρέντο Καπουτσίνο"},
+      "price": 4,
+      "image": "foto/A10.jpg",
+      "description": {"el":"Ο κρύος καπουτσίνο με διπλή δόση"}
+    },
+    {
+      "category": "rofimata",
+      "name": {"el":"Σοκολάτα (Ζεστή/Κρύα)"},
+      "price": 4.5,
+      "image": "foto/B1.jpg",
+      "description": {"el":"Ζεστό ή κρύο το αυθεντικό ρόφημα"}
+    },
+    {
+      "category": "rofimata",
+      "name": {"el":"Σοκολάτα Βιενουά (Σαντιγί)"},
+      "price": 5,
+      "image": "foto/B2.jpg",
+      "description": {"el":"Ζεστό ή κρύο με σαντιγί"}
+    }
+  ]
+}
