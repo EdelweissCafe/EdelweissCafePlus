@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Παραγγελίες</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .product { border: 1px solid #ccc; padding: 10px; margin: 10px; display: flex; align-items: center; }
+    .product img { width: 80px; height: 80px; margin-right: 10px; object-fit: cover; }
+    .product-details { flex-grow: 1; }
+    .product-name { font-weight: bold; }
+    .product-price { color: green; margin-top: 5px; }
+    .quantity { width: 50px; }
+    #cart { margin-top: 20px; border-top: 2px solid #000; padding-top: 10px; }
+    #submitOrder { margin-top: 10px; padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
 
+<h1>Online Παραγγελίες</h1>
+
+<label for="tableSelect">Επιλέξτε Τραπέζι:</label>
+<select id="tableSelect"></select>
+
+<div id="productsContainer"></div>
+
+<div id="cart">
+  <h2>Καλάθι Παραγγελίας</h2>
+  <ul id="cartItems"></ul>
+  <button id="submitOrder">Υποβολή Παραγγελίας</button>
+</div>
+
+<script>
+let orderData = {};
+let cart = [];
+
+fetch('order.json')
+  .then(response => response.json())
+  .then(data => {
+    orderData = data;
+    populateTables(data.tables);
+    displayProducts(data.products);
+  });
+
+function populateTables(tables) {
+  const select = document.getElementById('tableSelect');
+  tables.forEach(t => {
+    const option = document.createElement('option');
+    option.value = t;
+    option.textContent = `Τραπέζι ${t}`;
+    select.appendChild(option);
+  });
+}
+
+function displayProducts(products) {
+  const container = document.getElementById('productsContainer');
+  products.forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'product';
+    
+    const img = document.createElement('img');
+    img.src = p.image;
+    
+    const details = document.createElement('div');
+    details.className = 'product-details';
+    
+    const name = document.createElement('div');
+    name.className = 'product-name';
+    name.textContent = p.name.el;
+    
+    const desc = document.createElement('div');
+    desc.textContent = p.description.el;
+    
+    const price = document.createElement('div');
+    price.className = 'product-price';
+    price.textContent = `${p.price} €`;
+    
+    const qty = document.createElement('input');
+    qty.type = 'number';
+    qty.min = 0;
+    qty.value = 0;
+    qty.className = 'quantity';
+    qty.addEventListener('change', () => updateCart(p, parseInt(qty.value)));
+    
+    details.appendChild(name);
+    details.appendChild(desc);
+    details.appendChild(price);
+    div.appendChild(img);
+    div.appendChild(details);
+    div.appendChild(qty);
+    
+    container.appendChild(div);
+  });
+}
+
+function updateCart(product, quantity) {
+  const index = cart.findIndex(item => item.product.name.el === product.name.el);
+  if (index > -1) {
+    if (quantity === 0) cart.splice(index,1);
+    else cart[index].quantity = quantity;
+  } else if (quantity > 0) {
+    cart.push({product, quantity});
+  }
+  renderCart();
+}
+
+function renderCart() {
+  const cartList = document.getElementById('cartItems');
+  cartList.innerHTML = '';
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.product.name.el} x${item.quantity} - ${(item.product.price * item.quantity).toFixed(2)} €`;
+    cartList.appendChild(li);
+  });
+}
+
+document.getElementById('submitOrder').addEventListener('click', () => {
+  const table = document.getElementById('tableSelect').value;
+  if (cart.length === 0) {
+    alert('Το καλάθι είναι άδειο!');
+    return;
+  }
+  
+  // Για demo, απλώς εμφανίζουμε alert. Στην πράξη μπορεί να σταλεί σε POS/email/webhook.
+  alert(`Παραγγελία για Τραπέζι ${table}:\n` + cart.map(i => `${i.product.name.el} x${i.quantity}`).join('\n'));
+  
+  // Καθαρισμός καλαθιού
+  cart = [];
+  renderCart();
+  document.querySelectorAll('.quantity').forEach(input => input.value = 0);
+});
+</script>
+
+</body>
+</html>
