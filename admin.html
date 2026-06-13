@@ -229,6 +229,7 @@ function saveProduct(index) {
 }
 
 async function translateAll(index) {
+async function translateAll(index) {
   const p = menuData.products[index];
   const textName = p.name.el;
   const textDesc = p.description.el;
@@ -244,17 +245,16 @@ async function translateAll(index) {
     if (lang.code === "el") continue;
     
     try {
-      // Δοκιμάζουμε πρώτα το MyMemory API (πιο αξιόπιστο)
+      // Μετάφραση ονόματος
       const urlName = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textName)}&langpair=el|${lang.code}&de=someone@edelweiss.gr`;
       const resName = await fetch(urlName);
       const dataName = await resName.json();
       
       if (dataName && dataName.responseData && dataName.responseData.translatedText) {
         p.name[lang.code] = dataName.responseData.translatedText;
-        console.log(`✅ ${lang.code} όνομα: ${p.name[lang.code]}`);
       }
       
-      // Μετάφραση περιγραφής
+      // Μετάφραση περιγραφής (ακόμα και αν είναι κενή)
       if (textDesc && textDesc.trim() !== "") {
         const urlDesc = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textDesc)}&langpair=el|${lang.code}&de=someone@edelweiss.gr`;
         const resDesc = await fetch(urlDesc);
@@ -262,20 +262,21 @@ async function translateAll(index) {
         
         if (dataDesc && dataDesc.responseData && dataDesc.responseData.translatedText) {
           p.description[lang.code] = dataDesc.responseData.translatedText;
-          console.log(`✅ ${lang.code} περιγραφή: ${p.description[lang.code].substring(0, 50)}...`);
         }
+      } else {
+        // Αν η ελληνική περιγραφή είναι κενή, άφησε κενή και στις άλλες γλώσσες
+        p.description[lang.code] = "";
       }
       
-      // Μικρή καθυστέρηση
       await new Promise(resolve => setTimeout(resolve, 200));
       
     } catch(e) { 
       console.error(`❌ Σφάλμα για ${lang.code}:`, e);
-      p.name[lang.code] = textName; // Αν αποτύχει, βάζει το ελληνικό
+      p.name[lang.code] = textName;
     }
   }
   
-  alert("✅ Ολοκληρώθηκε η μετάφραση! Πατήστε ΟΚ για να δείτε τα αποτελέσματα.");
+  alert("✅ Ολοκληρώθηκε η μετάφραση!");
   editProduct(index);
 }
 
