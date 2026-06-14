@@ -2696,40 +2696,90 @@
         "sq": "Marule, Pulë, Edam/Gouda",
         "tr": "Marul, Tavuk, Edam/Gouda"
    }
-    
-}
-      "category": "pagota",
+    }, 
+ {
+  "id": "pagota",
+  "name": {
+    "el": "Παγωτά",
+    "en": "Ice Cream",
+    "fr": "Glaces",
+    "de": "Eis",
+    "it": "Gelati",
+    "es": "Helados",
+    "ru": "Мороженое",
+    "sr": "Sladoled",
+    "bg": "Сладолед",
+    "ro": "Inghetata",
+    "sq": "Akullore",
+    "tr": "Dondurma"
+  },
+  "items": [
+    {
+      "id": "vanilia",
       "name": {
-        "el": "Έξτρα Συνοδευτικά",
-        "en": "Extra Toppings",
-        "fr": "Extras Garnitures",
-        "de": "Extra Toppings",
-        "it": "Extra Guarnizioni",
-        "es": "Extras Toppings",
-        "ru": "Дополнительные топпинги",
-        "sr": "Ekstra dodaci",
-        "bg": "Екстра добавки",
-        "ro": "Extra Toppinguri",
-        "sq": "Shtesa ekstra",
-        "tr": "Ekstra Malzemeler"
+        "el": "Βανίλια",
+        "en": "Vanilla",
+        "fr": "Vanille",
+        "de": "Vanille",
+        "it": "Vaniglia",
+        "es": "Vainilla",
+        "ru": "Ваниль",
+        "sr": "Vanila",
+        "bg": "Ванилия",
+        "ro": "Vanilie",
+        "sq": "Vanilje",
+        "tr": "Vanilya"
       },
-      "price": 0.2,
-      "image": "foto/K10.jpg",
+      "price": 2.5,
+      "image": "foto/K1.jpg",
       "description": {
-        "el": "Τρούφα, Μπισκότο, Σιρόπια κ.λ.π.",
-        "en": "Truffle, Biscuit, Syrups etc.",
-        "fr": "Truffe, Biscuit, Sirops etc.",
-        "de": "Trüffel, Keks, Sirup usw.",
-        "it": "Tartufo, Biscotto, Sciroppi ecc.",
-        "es": "Trufa, Galleta, Jarabes etc.",
-        "ru": "Трюфель, Печенье, Сиропы и т.д.",
-        "sr": "Tartuf, Keks, Sirupi itd.",
-        "bg": "Трюфел, Бисквита, Сиропи и др.",
-        "ro": "Trufă, Biscuit, Siropuri etc.",
-        "sq": "Trufë, Biskotë, Shurupë etj.",
-        "tr": "Trüf, Bisküvi, Şuruplar vb."
+        "el": "Παγωτό κρέμα με γεύση βανίλιας.",
+        "en": "Creamy vanilla ice cream.",
+        "fr": "Glace cremeuse a la vanille.",
+        "de": "Cremiges Vanilleeis.",
+        "it": "Gelato cremoso alla vaniglia.",
+        "es": "Helado cremoso de vainilla.",
+        "ru": "Сливочное ванильное мороженое.",
+        "sr": "Kremasti sladoled od vanile.",
+        "bg": "Кремав ванилов сладолед.",
+        "ro": "Inghetata cremoasa de vanilie.",
+        "sq": "Akullore kremoze me vanilje.",
+        "tr": "Kremali vanilyali dondurma."
       }
     },
+{
+  "id": "sokolata",
+  "name": {
+    "el": "Σοκολάτα",
+    "en": "Chocolate",
+    "fr": "Chocolat",
+    "de": "Schokolade",
+    "it": "Cioccolato",
+    "es": "Chocolate",
+    "ru": "Шоколад",
+    "sr": "Čokolada",
+    "bg": "Шоколад",
+    "ro": "Ciocolată",
+    "sq": "Çokollatë",
+    "tr": "Çikolata"
+  },
+  "price": 2.5,
+  "image": "foto/K2.jpg",
+  "description": {
+    "el": "Παγωτό σκούρας σοκολάτας και κομμάτια σκούρας σοκολάτας.",
+    "en": "Dark chocolate ice cream with dark chocolate chunks.",
+    "fr": "Glace au chocolat noir avec des morceaux de chocolat noir.",
+    "de": "Dunkles Schokoladeneis mit dunklen Schokoladenstücken.",
+    "it": "Gelato al cioccolato fondente con pezzi di cioccolato fondente.",
+    "es": "Helado de chocolate negro con trozos de chocolate negro.",
+    "ru": "Темное шоколадное мороженое с кусочками темного шоколада.",
+    "sr": "Sladoled od tamne čokolade sa komadićima tamne čokolade.",
+    "bg": "Сладолед от тъмен шоколад с парченца тъмен шоколад.",
+    "ro": "Inghetata de ciocolata neagra cu bucati de ciocolata neagra.",
+    "sq": "Akullore me cokollate te zeze me copa cokollate te zeze.",
+    "tr": "Bitter cikolatali dondurma ve bitter cikolata parcalari."
+  }
+}
     {
       "category": "proina",
       "name": {
