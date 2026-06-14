@@ -2698,41 +2698,41 @@
    }
     }, 
  {
-"category": "pagota",
+  "category": "pagota",
   "name": {
-        "el": "Βανίλια",
-        "en": "Vanilla",
-        "fr": "Vanille",
-        "de": "Vanille",
-        "it": "Vaniglia",
-        "es": "Vainilla",
-        "ru": "Ваниль",
-        "sr": "Vanila",
-        "bg": "Ванилия",
-        "ro": "Vanilie",
-        "sq": "Vanilje",
-        "tr": "Vanilya"
-      },
-      "price": 2.5,
-      "image": "foto/K1.jpg",
-      "description": {
-        "el": "Παγωτό κρέμα με γεύση βανίλιας.",
-        "en": "Creamy vanilla ice cream.",
-        "fr": "Glace cremeuse a la vanille.",
-        "de": "Cremiges Vanilleeis.",
-        "it": "Gelato cremoso alla vaniglia.",
-        "es": "Helado cremoso de vainilla.",
-        "ru": "Сливочное ванильное мороженое.",
-        "sr": "Kremasti sladoled od vanile.",
-        "bg": "Кремав ванилов сладолед.",
-        "ro": "Inghetata cremoasa de vanilie.",
-        "sq": "Akullore kremoze me vanilje.",
-        "tr": "Kremali vanilyali dondurma."
-      }
-    },
+    "el": "Βανίλια",
+    "en": "Vanilla",
+    "fr": "Vanille",
+    "de": "Vanille",
+    "it": "Vaniglia",
+    "es": "Vainilla",
+    "ru": "Ваниль",
+    "sr": "Vanila",
+    "bg": "Ванилия",
+    "ro": "Vanilie",
+    "sq": "Vanilje",
+    "tr": "Vanilya"
+  },
+  "price": 2.5,
+  "image": "foto/K1.jpg",
+  "description": {
+    "el": "Παγωτό κρέμα με γεύση βανίλιας.",
+    "en": "Creamy vanilla ice cream.",
+    "fr": "Glace crémeuse à la vanille.",
+    "de": "Cremiges Vanilleeis.",
+    "it": "Gelato cremoso alla vaniglia.",
+    "es": "Helado cremoso de vainilla.",
+    "ru": "Сливочное ванильное мороженое.",
+    "sr": "Kremasti sladoled od vanile.",
+    "bg": "Кремав ванилов сладолед.",
+    "ro": "Înghețată cremoasă de vanilie.",
+    "sq": "Akullore kremoze me vanilje.",
+    "tr": "Kremalı vanilyalı dondurma."
+  }
+},
 {
   "category": "pagota",
-    "name": {
+  "name": {
     "el": "Σοκολάτα",
     "en": "Chocolate",
     "fr": "Chocolat",
@@ -2758,13 +2758,13 @@
     "ru": "Темное шоколадное мороженое с кусочками темного шоколада.",
     "sr": "Sladoled od tamne čokolade sa komadićima tamne čokolade.",
     "bg": "Сладолед от тъмен шоколад с парченца тъмен шоколад.",
-    "ro": "Inghetata de ciocolata neagra cu bucati de ciocolata neagra.",
-    "sq": "Akullore me cokollate te zeze me copa cokollate te zeze.",
-    "tr": "Bitter cikolatali dondurma ve bitter cikolata parcalari."
+    "ro": "Înghețată de ciocolată neagră cu bucăți de ciocolată neagră.",
+    "sq": "Akullore me çokollatë të zezë me copa çokollatë të zezë.",
+    "tr": "Bitter çikolatalı dondurma ve bitter çikolata parçaları."
   }
 },
 {
-  "category": "bueno",
+  "category": "pagota",
   "name": {
     "el": "Μπουένο",
     "en": "Bueno",
@@ -2789,15 +2789,15 @@
     "it": "Gelato dal ricco sapore di nocciola e cioccolato al latte.",
     "es": "Helado con rico sabor a avellana y chocolate con leche.",
     "ru": "Мороженое с насыщенным вкусом фундука и молочного шоколада.",
-    "sr": "Sladoled sa bogatim ukusom lesnika i mlecne cokolade.",
+    "sr": "Sladoled sa bogatim ukusom lešnika i mlečne čokolade.",
     "bg": "Сладолед с богат вкус на лешник и млечен шоколад.",
-    "ro": "Inghetata cu aroma bogata de alune si ciocolata cu lapte.",
-    "sq": "Akullore me shije te pasur lajthie dhe cokollate qumeshti.",
-    "tr": "Zengin findik ve sutlu cikolata aromali dondurma."
+    "ro": "Înghețată cu aromă bogată de alune și ciocolată cu lapte.",
+    "sq": "Akullore me shije të pasur lajthie dhe çokollatë qumështi.",
+    "tr": "Zengin fındık ve sütlü çikolata aromalı dondurma."
   }
 },
 {
- "category": "fystiki",
+  "category": "pagota",
   "name": {
     "el": "Φυστίκι",
     "en": "Pistachio",
@@ -2806,11 +2806,11 @@
     "it": "Pistacchio",
     "es": "Pistacho",
     "ru": "Фисташка",
-    "sr": "Pistac",
+    "sr": "Pistać",
     "bg": "Шамфъстък",
     "ro": "Fistic",
     "sq": "Pistach",
-    "tr": "Fistik"
+    "tr": "Fıstık"
   },
   "price": 2.5,
   "image": "foto/K4.jpg",
@@ -2822,15 +2822,15 @@
     "it": "Gelato al pistacchio con pezzi di pistacchio.",
     "es": "Helado de pistacho con trozos de pistacho.",
     "ru": "Фисташковое мороженое с кусочками фисташек.",
-    "sr": "Sladoled od pistaca sa komadicima pistaca.",
+    "sr": "Sladoled od pistaća sa komadićima pistaća.",
     "bg": "Сладолед от шамфъстък с парченца шамфъстък.",
-    "ro": "Inghetata cu aroma de fistic cu bucati de fistic.",
+    "ro": "Înghețată cu aromă de fistic cu bucăți de fistic.",
     "sq": "Akullore me shije pistachi me copa pistachi.",
-    "tr": "Fistikli dondurma ve fistik parcalari."
+    "tr": "Fıstıklı dondurma ve fıstık parçaları."
   }
 },
 {
-  "id": "karamela",
+  "category": "pagota",
   "name": {
     "el": "Καραμέλα",
     "en": "Caramel",
@@ -2857,13 +2857,13 @@
     "ru": "Карамельное мороженое с кусочками карамели.",
     "sr": "Sladoled od karamele sa komadićima karamele.",
     "bg": "Карамелен сладолед с парченца карамел.",
-    "ro": "Inghetata de caramel cu bucati de caramel.",
+    "ro": "Înghețată de caramel cu bucăți de caramel.",
     "sq": "Akullore karamel me copa karamel.",
-    "tr": "Karamelli dondurma ve karamel parcalari."
+    "tr": "Karamelli dondurma ve karamel parçaları."
   }
 },
 {
-  "id": "mpiskoto_krema",
+  "category": "pagota",
   "name": {
     "el": "Μπισκότο και κρέμα",
     "en": "Cookies and Cream",
@@ -2874,9 +2874,9 @@
     "ru": "Печенье и сливки",
     "sr": "Keks i krema",
     "bg": "Бисквита и крем",
-    "ro": "Biscuit si crema",
-    "sq": "Biskote dhe krem",
-    "tr": "Biskuvi ve krema"
+    "ro": "Biscuit și cremă",
+    "sq": "Biskotë dhe krem",
+    "tr": "Bisküvi ve krema"
   },
   "price": 2.5,
   "image": "foto/K6.jpg",
@@ -2888,15 +2888,15 @@
     "it": "Gelato al biscotto e crema con sciroppo di cioccolato e pezzi di biscotto al cacao.",
     "es": "Helado de galleta y crema con sirope de chocolate y trozos de galleta de cacao.",
     "ru": "Мороженое печенье и сливки с шоколадным сиропом и кусочками какао-печенья.",
-    "sr": "Sladoled od keksa i kreme sa cokoladnim sirupom i komadicima kakao keksa.",
+    "sr": "Sladoled od keksa i kreme sa čokoladnim sirupom i komadićima kakao keksa.",
     "bg": "Сладолед с вкус на бисквита и крем с шоколадов сироп и парченца какао бисквити.",
-    "ro": "Inghetata cu biscuiti si crema cu sirop de ciocolata si bucati de biscuiti de cacao.",
-    "sq": "Akullore me shije biskote dhe krem me shurup cokollate dhe copa biskote kakao.",
-    "tr": "Biskuvi ve kremali dondurma, cikolata surubu ve kakao biskuvi parcalari."
+    "ro": "Înghețată cu biscuiți și cremă cu sirop de ciocolată și bucăți de biscuiți de cacao.",
+    "sq": "Akullore me shije biskote dhe krem me shurup çokollate dhe copa biskote kakao.",
+    "tr": "Bisküvi ve kremalı dondurma, çikolata şurubu ve kakao bisküvi parçaları."
   }
 },
 {
-  "id": "fraoyla",
+  "category": "pagota",
   "name": {
     "el": "Φράουλα",
     "en": "Strawberry",
@@ -2907,69 +2907,69 @@
     "ru": "Клубника",
     "sr": "Jagoda",
     "bg": "Ягода",
-    "ro": "Capsuna",
+    "ro": "Căpșună",
     "sq": "Luleshtrydhe",
-    "tr": "Cilek"
+    "tr": "Çilek"
   },
   "price": 2.5,
   "image": "foto/K7.jpg",
   "description": {
-    "el": "Εκρηξη φρεσκαδας απο ενα βελουδινο, φρουτωδες και απολυτα δροσερο επιδορπιο, γεματο απο το αρωμα του καλοκαιριου.",
+    "el": "Έκρηξη φρεσκάδας από ένα βελούδινο, φρουτώδες και απόλυτα δροσερό επιδόρπιο, γεμάτο από το άρωμα του καλοκαιριού.",
     "en": "An explosion of freshness from a velvety, fruity and absolutely cool dessert, full of summer aroma.",
-    "fr": "Une explosion de fraicheur d'un dessert veloute, fruité et absolument frais, plein de l'arome de l'ete.",
-    "de": "Eine Explosion der Frische aus einem samtigen, fruchtigen und absolut kuhlen Dessert, voller Sommeraroma.",
+    "fr": "Une explosion de fraîcheur d'un dessert velouté, fruité et absolument frais, plein de l'arôme de l'été.",
+    "de": "Eine Explosion der Frische aus einem samtigen, fruchtigen und absolut kühlen Dessert, voller Sommeraroma.",
     "it": "Un'esplosione di freschezza da un dessert vellutato, fruttato e assolutamente fresco, pieno di aroma estivo.",
-    "es": "Una explosion de frescura de un postre aterciopelado, afrutado y absolutamente fresco, lleno de aroma veraniego.",
+    "es": "Una explosión de frescura de un postre aterciopelado, afrutado y absolutamente fresco, lleno de aroma veraniego.",
     "ru": "Взрыв свежести из бархатистого, фруктового и абсолютно прохладного десерта, полного летнего аромата.",
-    "sr": "Eksplozija svezine od barsunastog, vocnog i apsolutno hladnog deserta, punog letnjeg mirisa.",
+    "sr": "Eksplozija svežine od baršunastog, voćnog i apsolutno hladnog deserta, punog letnjeg mirisa.",
     "bg": "Експлозия от свежест от кадифен, плодов и абсолютно хладен десерт, изпълнен с летен аромат.",
-    "ro": "O explozie de prospetime dintr-un desert catifelat, fructat si absolut racoros, plin de aroma de vara.",
-    "sq": "Nje shperthim freskie nga nje embelsire kadifeje, frutash dhe absolutisht e fresket, plot arome verore.",
-    "tr": "Yaz aromasiyla dolu, kadifemsi, meyveli ve kesinlikle serin bir tatlidan tazelik patlamasi."
+    "ro": "O explozie de prospețime dintr-un desert catifelat, fructat și absolut răcoros, plin de aromă de vară.",
+    "sq": "Një shpërthim freskie nga një ëmbëlsirë kadifeje, frutash dhe absolutisht e freskët, plot aromë verore.",
+    "tr": "Yaz aromasıyla dolu, kadifemsi, meyveli ve kesinlikle serin bir tatlıdan tazelik patlaması."
   }
 },
 {
-  "id": "lemoni",
+  "category": "pagota",
   "name": {
     "el": "Λεμόνι",
     "en": "Lemon",
     "fr": "Citron",
     "de": "Zitrone",
     "it": "Limone",
-    "es": "Limon",
+    "es": "Limón",
     "ru": "Лимон",
     "sr": "Limun",
     "bg": "Лимон",
-    "ro": "Lamai",
+    "ro": "Lămâie",
     "sq": "Limon",
     "tr": "Limon"
   },
   "price": 2.5,
   "image": "foto/K8.jpg",
   "description": {
-    "el": "Η απολυτη ισορροπια γλυκυτητας και οξυτητας.",
+    "el": "Η απόλυτη ισορροπία γλυκύτητας και οξύτητας.",
     "en": "The perfect balance of sweetness and acidity.",
-    "fr": "L'equilibre parfait entre douceur et acidite.",
-    "de": "Das perfekte Gleichgewicht von Susse und Saure.",
-    "it": "Il perfetto equilibrio tra dolcezza e acidita.",
+    "fr": "L'équilibre parfait entre douceur et acidité.",
+    "de": "Das perfekte Gleichgewicht von Süße und Säure.",
+    "it": "Il perfetto equilibrio tra dolcezza e acidità.",
     "es": "El equilibrio perfecto entre dulzura y acidez.",
     "ru": "Идеальный баланс сладости и кислотности.",
-    "sr": "Savrsena ravnoteza slatkoce i kiselosti.",
+    "sr": "Savršena ravnoteža slatkoće i kiselosti.",
     "bg": "Перфектният баланс между сладост и киселинност.",
-    "ro": "Echilibrul perfect intre dulceata si aciditate.",
-    "sq": "Bilanci perfekt i embelsise dhe aciditetit.",
-    "tr": "Tatlik ve asitligin mukemmel dengesi."
+    "ro": "Echilibrul perfect între dulceață și aciditate.",
+    "sq": "Bilanci perfekt i ëmbëlsisë dhe aciditetit.",
+    "tr": "Tatlılık ve asitliğin mükemmel dengesi."
   }
 },
 {
-  "id": "tiramisou",
+  "category": "pagota",
   "name": {
     "el": "Τιραμισού",
     "en": "Tiramisu",
     "fr": "Tiramisu",
     "de": "Tiramisu",
-    "it": "Tiramisu",
-    "es": "Tiramisu",
+    "it": "Tiramisù",
+    "es": "Tiramisú",
     "ru": "Тирамису",
     "sr": "Tiramisu",
     "bg": "Тирамису",
@@ -2982,90 +2982,90 @@
   "description": {
     "el": "Παγωτό με γεύση τιραμισού, με σιρόπι κακάο και κομμάτια μπισκότου με γεύση καφέ.",
     "en": "Tiramisu flavored ice cream with cocoa syrup and coffee-flavored cookie pieces.",
-    "fr": "Glace au gout de tiramisu avec sirop de cacao et morceaux de biscuits au cafe.",
-    "de": "Tiramisu-Eis mit Kakaosirup und Kaffeekeksstucken.",
-    "it": "Gelato al gusto tiramisu con sciroppo di cacao e pezzi di biscotto al caffe.",
-    "es": "Helado con sabor a tiramisu con sirope de cacao y trozos de galleta con sabor a cafe.",
+    "fr": "Glace au goût de tiramisu avec sirop de cacao et morceaux de biscuits au café.",
+    "de": "Tiramisu-Eis mit Kakaosirup und Kaffeekeksstücken.",
+    "it": "Gelato al gusto tiramisù con sciroppo di cacao e pezzi di biscotto al caffè.",
+    "es": "Helado con sabor a tiramisú con sirope de cacao y trozos de galleta con sabor a café.",
     "ru": "Мороженое со вкусом тирамису с какао-сиропом и кусочками печенья со вкусом кофе.",
-    "sr": "Sladoled sa ukusom tiramisua sa kakao sirupom i komadicima keksa sa ukusom kafe.",
+    "sr": "Sladoled sa ukusom tiramisua sa kakao sirupom i komadićima keksa sa ukusom kafe.",
     "bg": "Сладолед с вкус на тирамису с какао сироп и парченца бисквити с вкус на кафе.",
-    "ro": "Inghetata cu aroma de tiramisu cu sirop de cacao si bucati de biscuiti cu aroma de cafea.",
+    "ro": "Înghețată cu aromă de tiramisu cu sirop de cacao și bucăți de biscuiți cu aromă de cafea.",
     "sq": "Akullore me shije tiramisu me shurup kakao dhe copa biskote me shije kafeje.",
-    "tr": "Tiramisu aromali dondurma, kakao surubu ve kahve aromali biskuvi parcalari."
+    "tr": "Tiramisu aromalı dondurma, kakao şurubu ve kahve aromalı bisküvi parçaları."
   }
 },
 {
-  "id": "giaourti_meli_karydia",
+  "category": "pagota",
   "name": {
     "el": "Γιαούρτι, μέλι και καρύδια",
     "en": "Yogurt, honey and walnuts",
     "fr": "Yaourt, miel et noix",
-    "de": "Joghurt, Honig und Walnusse",
+    "de": "Joghurt, Honig und Walnüsse",
     "it": "Yogurt, miele e noci",
     "es": "Yogur, miel y nueces",
     "ru": "Йогурт, мед и грецкие орехи",
     "sr": "Jogurt, med i orasi",
     "bg": "Кисело мляко, мед и орехи",
-    "ro": "Iaurt, miere si nuci",
-    "sq": "Kos, mjalte dhe arra",
-    "tr": "Yogurt, bal ve ceviz"
+    "ro": "Iaurt, miere și nuci",
+    "sq": "Kos, mjaltë dhe arra",
+    "tr": "Yoğurt, bal ve ceviz"
   },
   "price": 2.5,
   "image": "foto/K10.jpg",
   "description": {
     "el": "Παγωτό με γιαούρτι ελληνικού τύπου, σιρόπι μελιού και καραμελωμένα κομμάτια καρυδιών.",
     "en": "Greek-style yogurt ice cream with honey syrup and caramelized walnut pieces.",
-    "fr": "Glace au yaourt de style grec avec sirop de miel et morceaux de noix caramelisees.",
-    "de": "Joghurteis nach griechischer Art mit Honigsirup und karamellisierten Walnussstucken.",
+    "fr": "Glace au yaourt de style grec avec sirop de miel et morceaux de noix caramélisées.",
+    "de": "Joghurteis nach griechischer Art mit Honigsirup und karamellisierten Walnussstücken.",
     "it": "Gelato allo yogurt greco con sciroppo di miele e pezzi di noci caramellate.",
     "es": "Helado de yogur estilo griego con sirope de miel y trozos de nuez caramelizada.",
     "ru": "Мороженое из йогурта по-гречески с медовым сиропом и карамелизированными кусочками грецких орехов.",
-    "sr": "Sladoled od grckog jogurta sa medenim sirupom i karamelizovanim komadicima oraha.",
+    "sr": "Sladoled od grčkog jogurta sa medenim sirupom i karamelizovanim komadićima oraha.",
     "bg": "Сладолед от кисело мляко в гръцки стил с меден сироп и карамелизирани парченца орехи.",
-    "ro": "Inghetata de iaurt in stil grecesc cu sirop de miere si bucati de nuca caramelizata.",
-    "sq": "Akullore me kos stili grek me shurup mjalti dhe copa arre te karamelizuara.",
-    "tr": "Yunan usulu yogurtlu dondurma, bal surubu ve karamelize ceviz parcalari."
+    "ro": "Înghețată de iaurt în stil grecesc cu sirop de miere și bucăți de nucă caramelizată.",
+    "sq": "Akullore me kos stili grek me shurup mjalti dhe copa arre të karamelizuara.",
+    "tr": "Yunan usulü yoğurtlu dondurma, bal şurubu ve karamelize ceviz parçaları."
   }
-    },
-    {
-      "id": "stratsiatela",
-      "name": {
-        "el": "Στρατσιατέλα",
-        "en": "Stracciatella",
-        "fr": "Stracciatella",
-        "de": "Stracciatella",
-        "it": "Stracciatella",
-        "es": "Stracciatella",
-        "ru": "Страчателла",
-        "sr": "Stracatela",
-        "bg": "Страчатела",
-        "ro": "Stracciatella",
-        "sq": "Stracciatella",
-        "tr": "Stracciatella"
-      },
-      "price": 2.5,
-      "image": "foto/K11.jpg",
-      "description": {
-        "el": "Παγωτό με γεύση βανίλια και κομμάτια σοκολάτας.",
-        "en": "Vanilla flavored ice cream with chocolate pieces.",
-        "fr": "Glace a la vanille avec des morceaux de chocolat.",
-        "de": "Vanilleeis mit Schokoladenstucken.",
-        "it": "Gelato alla vaniglia con pezzi di cioccolato.",
-        "es": "Helado de vainilla con trozos de chocolate.",
-        "ru": "Ванильное мороженое с кусочками шоколада.",
-        "sr": "Sladoled od vanile sa komadicima cokolade.",
-        "bg": "Ванилов сладолед с парченца шоколад.",
-        "ro": "Inghetata cu aroma de vanilie cu bucati de ciocolata.",
-        "sq": "Akullore me shije vanilje me copa cokollate.",
-        "tr": "Vanilya aromali dondurma ve cikolata parcalari."
-      }
-    },
+},
 {
-  "id": "extra_synodeytika",
+  "category": "pagota",
+  "name": {
+    "el": "Στρατσιατέλα",
+    "en": "Stracciatella",
+    "fr": "Stracciatella",
+    "de": "Stracciatella",
+    "it": "Stracciatella",
+    "es": "Stracciatella",
+    "ru": "Страчателла",
+    "sr": "Straćatela",
+    "bg": "Страчатела",
+    "ro": "Stracciatella",
+    "sq": "Stracciatella",
+    "tr": "Stracciatella"
+  },
+  "price": 2.5,
+  "image": "foto/K11.jpg",
+  "description": {
+    "el": "Παγωτό με γεύση βανίλια και κομμάτια σοκολάτας.",
+    "en": "Vanilla flavored ice cream with chocolate pieces.",
+    "fr": "Glace à la vanille avec des morceaux de chocolat.",
+    "de": "Vanilleeis mit Schokoladenstücken.",
+    "it": "Gelato alla vaniglia con pezzi di cioccolato.",
+    "es": "Helado de vainilla con trozos de chocolate.",
+    "ru": "Ванильное мороженое с кусочками шоколада.",
+    "sr": "Sladoled od vanile sa komadićima čokolade.",
+    "bg": "Ванилов сладолед с парченца шоколад.",
+    "ro": "Înghețată cu aromă de vanilie cu bucăți de ciocolată.",
+    "sq": "Akullore me shije vanilje me copa çokollate.",
+    "tr": "Vanilya aromalı dondurma ve çikolata parçaları."
+  }
+},
+{
+  "category": "pagota",
   "name": {
     "el": "Εξτρα Συνοδευτικά",
     "en": "Extra Toppings",
-    "fr": "Garnitures Supplementaires",
+    "fr": "Garnitures Supplémentaires",
     "de": "Extra Toppings",
     "it": "Extra Guarnizioni",
     "es": "Extras",
@@ -3086,12 +3086,17 @@
     "it": "Tartufo, biscotto, sciroppo al cioccolato ecc.",
     "es": "Trufa, galleta, sirope de chocolate, etc.",
     "ru": "Трюфель, печенье, шоколадный сироп и др.",
-    "sr": "Tartuf, keks, cokoladni sirup itd.",
+    "sr": "Tartuf, keks, čokoladni sirup itd.",
     "bg": "Трюфел, бисквита, шоколадов сироп и др.",
-    "ro": "Trufa, biscuit, sirop de ciocolata etc.",
-    "sq": "Trufe, biskote, shurup cokollate etj.",
-    "tr": "Trüf, biskuvi, cikolata surubu vb."
+    "ro": "Trufa, biscuit, sirop de ciocolată etc.",
+    "sq": "Trufe, biskote, shurup çokollate etj.",
+    "tr": "Trüf, bisküvi, çikolata şurubu vb."
   }
+}
+
+  
+  
+      
   }
   ]
   }
