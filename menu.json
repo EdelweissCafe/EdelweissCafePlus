@@ -3079,38 +3079,3 @@
     }
   ]
  }
-    {
-      "category": "proina",
-      "name": {
-        "el": "Αυγά με μπέικον ",
-        "en": "Eggs with bacon",
-        "fr": "Oeufs au bacon",
-        "de": "Eier mit Speck",
-        "it": "Uova con pancetta",
-        "es": "Huevos con tocino",
-        "ru": "Яйца с беконом.",
-        "sr": "Jaja sa slaninom",
-        "bg": "Яйца с бекон",
-        "ro": "Ouă cu bacon",
-        "sq": "Vezë me proshutë",
-        "tr": "Pastırmalı yumurta"
-      },
-      "description": {
-        "el": "2 Αυγά μάτια με μπέικον και ψημένο ψωμί του τοστ.",
-        "en": "2 Eggs with bacon and toasted bread.",
-        "fr": "2 œufs avec du bacon et du pain grillé.",
-        "de": "2 Eier mit Speck und geröstetem Brot.",
-        "it": "2 Uova con pancetta e pane tostato.",
-        "es": "2 Huevos con tocino y pan tostado.",
-        "ru": "2 яйца с беконом и поджаренным хлебом.",
-        "sr": "2 jaja sa slaninom i tostiranim hlebom.",
-        "bg": "2 яйца с бекон и препечен хляб.",
-        "ro": "2 Oua cu bacon si paine prajita.",
-        "sq": "2 Vezë me proshutë dhe bukë të thekur.",
-        "tr": "2 adet pastırmalı yumurta ve kızarmış ekmek."
-      },
-      "price": 8.5,
-      "image": "foto/H5.jpg"
-    }
-  ]
-}
