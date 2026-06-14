@@ -2700,23 +2700,6 @@
  {
 "category": "pagota",
   "name": {
-    "el": "Παγωτά",
-    "en": "Ice Cream",
-    "fr": "Glaces",
-    "de": "Eis",
-    "it": "Gelati",
-    "es": "Helados",
-    "ru": "Мороженое",
-    "sr": "Sladoled",
-    "bg": "Сладолед",
-    "ro": "Inghetata",
-    "sq": "Akullore",
-    "tr": "Dondurma"
-  },
-  "items": [
-    {
-      "id": "vanilia",
-      "name": {
         "el": "Βανίλια",
         "en": "Vanilla",
         "fr": "Vanille",
@@ -2748,8 +2731,8 @@
       }
     },
 {
-  "id": "sokolata",
-  "name": {
+  "category": "pagota",
+    "name": {
     "el": "Σοκολάτα",
     "en": "Chocolate",
     "fr": "Chocolat",
@@ -2781,7 +2764,7 @@
   }
 },
 {
-  "id": "bueno",
+  "category": "bueno",
   "name": {
     "el": "Μπουένο",
     "en": "Bueno",
@@ -2814,7 +2797,7 @@
   }
 },
 {
-  "id": "fystiki",
+ "category": "fystiki",
   "name": {
     "el": "Φυστίκι",
     "en": "Pistachio",
