@@ -3076,6 +3076,38 @@
         "sq": "Akullore me shije vanilje me copa cokollate.",
         "tr": "Vanilya aromali dondurma ve cikolata parcalari."
       }
-    }
-  ]
+    },
+{
+  "id": "extra_synodeytika",
+  "name": {
+    "el": "Εξτρα Συνοδευτικά",
+    "en": "Extra Toppings",
+    "fr": "Garnitures Supplementaires",
+    "de": "Extra Toppings",
+    "it": "Extra Guarnizioni",
+    "es": "Extras",
+    "ru": "Дополнительные топпинги",
+    "sr": "Ekstra dodaci",
+    "bg": "Екстра добавки",
+    "ro": "Toppinguri extra",
+    "sq": "Shtesa ekstra",
+    "tr": "Ekstra soslar"
+  },
+  "price": 0.2,
+  "image": "foto/K12.jpg",
+  "description": {
+    "el": "Τρούφα, μπισκότο, σιρόπι σοκολάτας κ.α.",
+    "en": "Truffle, biscuit, chocolate syrup etc.",
+    "fr": "Truffe, biscuit, sirop au chocolat, etc.",
+    "de": "Trüffel, Keks, Schokoladensirup usw.",
+    "it": "Tartufo, biscotto, sciroppo al cioccolato ecc.",
+    "es": "Trufa, galleta, sirope de chocolate, etc.",
+    "ru": "Трюфель, печенье, шоколадный сироп и др.",
+    "sr": "Tartuf, keks, cokoladni sirup itd.",
+    "bg": "Трюфел, бисквита, шоколадов сироп и др.",
+    "ro": "Trufa, biscuit, sirop de ciocolata etc.",
+    "sq": "Trufe, biskote, shurup cokollate etj.",
+    "tr": "Trüf, biskuvi, cikolata surubu vb."
+  }
+ ]
  }
