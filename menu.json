@@ -2779,7 +2779,74 @@
     "sq": "Akullore me cokollate te zeze me copa cokollate te zeze.",
     "tr": "Bitter cikolatali dondurma ve bitter cikolata parcalari."
   }
+},
+{
+  "id": "bueno",
+  "name": {
+    "el": "Μπουένο",
+    "en": "Bueno",
+    "fr": "Bueno",
+    "de": "Bueno",
+    "it": "Bueno",
+    "es": "Bueno",
+    "ru": "Буэно",
+    "sr": "Bueno",
+    "bg": "Буено",
+    "ro": "Bueno",
+    "sq": "Bueno",
+    "tr": "Bueno"
+  },
+  "price": 2.5,
+  "image": "foto/K3.jpg",
+  "description": {
+    "el": "Παγωτό με πλούσια γεύση φουντουκιού και σοκολάτας γάλακτος.",
+    "en": "Ice cream with rich hazelnut and milk chocolate flavor.",
+    "fr": "Glace à la riche saveur de noisette et de chocolat au lait.",
+    "de": "Eis mit reichhaltigem Haselnuss- und Milchschokoladengeschmack.",
+    "it": "Gelato dal ricco sapore di nocciola e cioccolato al latte.",
+    "es": "Helado con rico sabor a avellana y chocolate con leche.",
+    "ru": "Мороженое с насыщенным вкусом фундука и молочного шоколада.",
+    "sr": "Sladoled sa bogatim ukusom lesnika i mlecne cokolade.",
+    "bg": "Сладолед с богат вкус на лешник и млечен шоколад.",
+    "ro": "Inghetata cu aroma bogata de alune si ciocolata cu lapte.",
+    "sq": "Akullore me shije te pasur lajthie dhe cokollate qumeshti.",
+    "tr": "Zengin findik ve sutlu cikolata aromali dondurma."
+  }
+},
+{
+  "id": "fystiki",
+  "name": {
+    "el": "Φυστίκι",
+    "en": "Pistachio",
+    "fr": "Pistache",
+    "de": "Pistazie",
+    "it": "Pistacchio",
+    "es": "Pistacho",
+    "ru": "Фисташка",
+    "sr": "Pistac",
+    "bg": "Шамфъстък",
+    "ro": "Fistic",
+    "sq": "Pistach",
+    "tr": "Fistik"
+  },
+  "price": 2.5,
+  "image": "foto/K4.jpg",
+  "description": {
+    "el": "Παγωτό με γεύση φιστίκι με κομμάτια φιστίκι.",
+    "en": "Pistachio flavored ice cream with pistachio pieces.",
+    "fr": "Glace à la pistache avec des morceaux de pistache.",
+    "de": "Pistazieneis mit Pistazienstücken.",
+    "it": "Gelato al pistacchio con pezzi di pistacchio.",
+    "es": "Helado de pistacho con trozos de pistacho.",
+    "ru": "Фисташковое мороженое с кусочками фисташек.",
+    "sr": "Sladoled od pistaca sa komadicima pistaca.",
+    "bg": "Сладолед от шамфъстък с парченца шамфъстък.",
+    "ro": "Inghetata cu aroma de fistic cu bucati de fistic.",
+    "sq": "Akullore me shije pistachi me copa pistachi.",
+    "tr": "Fistikli dondurma ve fistik parcalari."
+  }
 }
+    
     {
       "category": "proina",
       "name": {
