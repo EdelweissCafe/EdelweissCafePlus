@@ -2977,7 +2977,108 @@
     "sq": "Bilanci perfekt i embelsise dhe aciditetit.",
     "tr": "Tatlik ve asitligin mukemmel dengesi."
   }
-}
+},
+{
+  "id": "tiramisou",
+  "name": {
+    "el": "Τιραμισού",
+    "en": "Tiramisu",
+    "fr": "Tiramisu",
+    "de": "Tiramisu",
+    "it": "Tiramisu",
+    "es": "Tiramisu",
+    "ru": "Тирамису",
+    "sr": "Tiramisu",
+    "bg": "Тирамису",
+    "ro": "Tiramisu",
+    "sq": "Tiramisu",
+    "tr": "Tiramisu"
+  },
+  "price": 2.5,
+  "image": "foto/K9.jpg",
+  "description": {
+    "el": "Παγωτό με γεύση τιραμισού, με σιρόπι κακάο και κομμάτια μπισκότου με γεύση καφέ.",
+    "en": "Tiramisu flavored ice cream with cocoa syrup and coffee-flavored cookie pieces.",
+    "fr": "Glace au gout de tiramisu avec sirop de cacao et morceaux de biscuits au cafe.",
+    "de": "Tiramisu-Eis mit Kakaosirup und Kaffeekeksstucken.",
+    "it": "Gelato al gusto tiramisu con sciroppo di cacao e pezzi di biscotto al caffe.",
+    "es": "Helado con sabor a tiramisu con sirope de cacao y trozos de galleta con sabor a cafe.",
+    "ru": "Мороженое со вкусом тирамису с какао-сиропом и кусочками печенья со вкусом кофе.",
+    "sr": "Sladoled sa ukusom tiramisua sa kakao sirupom i komadicima keksa sa ukusom kafe.",
+    "bg": "Сладолед с вкус на тирамису с какао сироп и парченца бисквити с вкус на кафе.",
+    "ro": "Inghetata cu aroma de tiramisu cu sirop de cacao si bucati de biscuiti cu aroma de cafea.",
+    "sq": "Akullore me shije tiramisu me shurup kakao dhe copa biskote me shije kafeje.",
+    "tr": "Tiramisu aromali dondurma, kakao surubu ve kahve aromali biskuvi parcalari."
+  }
+},
+{
+  "id": "giaourti_meli_karydia",
+  "name": {
+    "el": "Γιαούρτι, μέλι και καρύδια",
+    "en": "Yogurt, honey and walnuts",
+    "fr": "Yaourt, miel et noix",
+    "de": "Joghurt, Honig und Walnusse",
+    "it": "Yogurt, miele e noci",
+    "es": "Yogur, miel y nueces",
+    "ru": "Йогурт, мед и грецкие орехи",
+    "sr": "Jogurt, med i orasi",
+    "bg": "Кисело мляко, мед и орехи",
+    "ro": "Iaurt, miere si nuci",
+    "sq": "Kos, mjalte dhe arra",
+    "tr": "Yogurt, bal ve ceviz"
+  },
+  "price": 2.5,
+  "image": "foto/K10.jpg",
+  "description": {
+    "el": "Παγωτό με γιαούρτι ελληνικού τύπου, σιρόπι μελιού και καραμελωμένα κομμάτια καρυδιών.",
+    "en": "Greek-style yogurt ice cream with honey syrup and caramelized walnut pieces.",
+    "fr": "Glace au yaourt de style grec avec sirop de miel et morceaux de noix caramelisees.",
+    "de": "Joghurteis nach griechischer Art mit Honigsirup und karamellisierten Walnussstucken.",
+    "it": "Gelato allo yogurt greco con sciroppo di miele e pezzi di noci caramellate.",
+    "es": "Helado de yogur estilo griego con sirope de miel y trozos de nuez caramelizada.",
+    "ru": "Мороженое из йогурта по-гречески с медовым сиропом и карамелизированными кусочками грецких орехов.",
+    "sr": "Sladoled od grckog jogurta sa medenim sirupom i karamelizovanim komadicima oraha.",
+    "bg": "Сладолед от кисело мляко в гръцки стил с меден сироп и карамелизирани парченца орехи.",
+    "ro": "Inghetata de iaurt in stil grecesc cu sirop de miere si bucati de nuca caramelizata.",
+    "sq": "Akullore me kos stili grek me shurup mjalti dhe copa arre te karamelizuara.",
+    "tr": "Yunan usulu yogurtlu dondurma, bal surubu ve karamelize ceviz parcalari."
+  }
+    },
+    {
+      "id": "stratsiatela",
+      "name": {
+        "el": "Στρατσιατέλα",
+        "en": "Stracciatella",
+        "fr": "Stracciatella",
+        "de": "Stracciatella",
+        "it": "Stracciatella",
+        "es": "Stracciatella",
+        "ru": "Страчателла",
+        "sr": "Stracatela",
+        "bg": "Страчатела",
+        "ro": "Stracciatella",
+        "sq": "Stracciatella",
+        "tr": "Stracciatella"
+      },
+      "price": 2.5,
+      "image": "foto/K11.jpg",
+      "description": {
+        "el": "Παγωτό με γεύση βανίλια και κομμάτια σοκολάτας.",
+        "en": "Vanilla flavored ice cream with chocolate pieces.",
+        "fr": "Glace a la vanille avec des morceaux de chocolat.",
+        "de": "Vanilleeis mit Schokoladenstucken.",
+        "it": "Gelato alla vaniglia con pezzi di cioccolato.",
+        "es": "Helado de vainilla con trozos de chocolate.",
+        "ru": "Ванильное мороженое с кусочками шоколада.",
+        "sr": "Sladoled od vanile sa komadicima cokolade.",
+        "bg": "Ванилов сладолед с парченца шоколад.",
+        "ro": "Inghetata cu aroma de vanilie cu bucati de ciocolata.",
+        "sq": "Akullore me shije vanilje me copa cokollate.",
+        "tr": "Vanilya aromali dondurma ve cikolata parcalari."
+      }
+    }
+  ]
+ }
     {
       "category": "proina",
       "name": {
