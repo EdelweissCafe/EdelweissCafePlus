@@ -2845,8 +2845,139 @@
     "sq": "Akullore me shije pistachi me copa pistachi.",
     "tr": "Fistikli dondurma ve fistik parcalari."
   }
+},
+{
+  "id": "karamela",
+  "name": {
+    "el": "Καραμέλα",
+    "en": "Caramel",
+    "fr": "Caramel",
+    "de": "Karamell",
+    "it": "Caramello",
+    "es": "Caramelo",
+    "ru": "Карамель",
+    "sr": "Karamela",
+    "bg": "Карамел",
+    "ro": "Caramel",
+    "sq": "Karamel",
+    "tr": "Karamel"
+  },
+  "price": 2.5,
+  "image": "foto/K5.jpg",
+  "description": {
+    "el": "Παγωτό καραμέλα με κομμάτια καραμέλας.",
+    "en": "Caramel ice cream with caramel pieces.",
+    "fr": "Glace au caramel avec des morceaux de caramel.",
+    "de": "Karamelleis mit Karamellstücken.",
+    "it": "Gelato al caramello con pezzi di caramello.",
+    "es": "Helado de caramelo con trozos de caramelo.",
+    "ru": "Карамельное мороженое с кусочками карамели.",
+    "sr": "Sladoled od karamele sa komadićima karamele.",
+    "bg": "Карамелен сладолед с парченца карамел.",
+    "ro": "Inghetata de caramel cu bucati de caramel.",
+    "sq": "Akullore karamel me copa karamel.",
+    "tr": "Karamelli dondurma ve karamel parcalari."
+  }
+},
+{
+  "id": "mpiskoto_krema",
+  "name": {
+    "el": "Μπισκότο και κρέμα",
+    "en": "Cookies and Cream",
+    "fr": "Biscuit et crème",
+    "de": "Kekse und Sahne",
+    "it": "Biscotto e crema",
+    "es": "Galleta y crema",
+    "ru": "Печенье и сливки",
+    "sr": "Keks i krema",
+    "bg": "Бисквита и крем",
+    "ro": "Biscuit si crema",
+    "sq": "Biskote dhe krem",
+    "tr": "Biskuvi ve krema"
+  },
+  "price": 2.5,
+  "image": "foto/K6.jpg",
+  "description": {
+    "el": "Παγωτό με γεύση μπισκότο και κρέμα, σιρόπι σοκολάτας και κομμάτια μπισκότου κακάο.",
+    "en": "Cookies and cream ice cream with chocolate syrup and cocoa cookie pieces.",
+    "fr": "Glace au biscuit et à la crème avec sirop de chocolat et morceaux de biscuits au cacao.",
+    "de": "Kekse-Sahne-Eis mit Schokoladensirup und Kakaokeksstücken.",
+    "it": "Gelato al biscotto e crema con sciroppo di cioccolato e pezzi di biscotto al cacao.",
+    "es": "Helado de galleta y crema con sirope de chocolate y trozos de galleta de cacao.",
+    "ru": "Мороженое печенье и сливки с шоколадным сиропом и кусочками какао-печенья.",
+    "sr": "Sladoled od keksa i kreme sa cokoladnim sirupom i komadicima kakao keksa.",
+    "bg": "Сладолед с вкус на бисквита и крем с шоколадов сироп и парченца какао бисквити.",
+    "ro": "Inghetata cu biscuiti si crema cu sirop de ciocolata si bucati de biscuiti de cacao.",
+    "sq": "Akullore me shije biskote dhe krem me shurup cokollate dhe copa biskote kakao.",
+    "tr": "Biskuvi ve kremali dondurma, cikolata surubu ve kakao biskuvi parcalari."
+  }
+},
+{
+  "id": "fraoyla",
+  "name": {
+    "el": "Φράουλα",
+    "en": "Strawberry",
+    "fr": "Fraise",
+    "de": "Erdbeere",
+    "it": "Fragola",
+    "es": "Fresa",
+    "ru": "Клубника",
+    "sr": "Jagoda",
+    "bg": "Ягода",
+    "ro": "Capsuna",
+    "sq": "Luleshtrydhe",
+    "tr": "Cilek"
+  },
+  "price": 2.5,
+  "image": "foto/K7.jpg",
+  "description": {
+    "el": "Εκρηξη φρεσκαδας απο ενα βελουδινο, φρουτωδες και απολυτα δροσερο επιδορπιο, γεματο απο το αρωμα του καλοκαιριου.",
+    "en": "An explosion of freshness from a velvety, fruity and absolutely cool dessert, full of summer aroma.",
+    "fr": "Une explosion de fraicheur d'un dessert veloute, fruité et absolument frais, plein de l'arome de l'ete.",
+    "de": "Eine Explosion der Frische aus einem samtigen, fruchtigen und absolut kuhlen Dessert, voller Sommeraroma.",
+    "it": "Un'esplosione di freschezza da un dessert vellutato, fruttato e assolutamente fresco, pieno di aroma estivo.",
+    "es": "Una explosion de frescura de un postre aterciopelado, afrutado y absolutamente fresco, lleno de aroma veraniego.",
+    "ru": "Взрыв свежести из бархатистого, фруктового и абсолютно прохладного десерта, полного летнего аромата.",
+    "sr": "Eksplozija svezine od barsunastog, vocnog i apsolutno hladnog deserta, punog letnjeg mirisa.",
+    "bg": "Експлозия от свежест от кадифен, плодов и абсолютно хладен десерт, изпълнен с летен аромат.",
+    "ro": "O explozie de prospetime dintr-un desert catifelat, fructat si absolut racoros, plin de aroma de vara.",
+    "sq": "Nje shperthim freskie nga nje embelsire kadifeje, frutash dhe absolutisht e fresket, plot arome verore.",
+    "tr": "Yaz aromasiyla dolu, kadifemsi, meyveli ve kesinlikle serin bir tatlidan tazelik patlamasi."
+  }
+},
+{
+  "id": "lemoni",
+  "name": {
+    "el": "Λεμόνι",
+    "en": "Lemon",
+    "fr": "Citron",
+    "de": "Zitrone",
+    "it": "Limone",
+    "es": "Limon",
+    "ru": "Лимон",
+    "sr": "Limun",
+    "bg": "Лимон",
+    "ro": "Lamai",
+    "sq": "Limon",
+    "tr": "Limon"
+  },
+  "price": 2.5,
+  "image": "foto/K8.jpg",
+  "description": {
+    "el": "Η απολυτη ισορροπια γλυκυτητας και οξυτητας.",
+    "en": "The perfect balance of sweetness and acidity.",
+    "fr": "L'equilibre parfait entre douceur et acidite.",
+    "de": "Das perfekte Gleichgewicht von Susse und Saure.",
+    "it": "Il perfetto equilibrio tra dolcezza e acidita.",
+    "es": "El equilibrio perfecto entre dulzura y acidez.",
+    "ru": "Идеальный баланс сладости и кислотности.",
+    "sr": "Savrsena ravnoteza slatkoce i kiselosti.",
+    "bg": "Перфектният баланс между сладост и киселинност.",
+    "ro": "Echilibrul perfect intre dulceata si aciditate.",
+    "sq": "Bilanci perfekt i embelsise dhe aciditetit.",
+    "tr": "Tatlik ve asitligin mukemmel dengesi."
+  }
 }
-    
     {
       "category": "proina",
       "name": {
